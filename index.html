@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bidhan Arya — Rotor & Verse</title>
+  <meta name="description" content="Bidhan Arya — helicopter engineer at IIT Kanpur. Projects, stories, poems, resume, contact." />
+  <link rel="stylesheet" href="styles-index.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Bidhan Arya</a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#stories" class="nav-link">Stories</a>
+        <a href="#poems" class="nav-link">Poems</a>
+        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO / LANDING (id=home) -->
+  <main id="home" class="page container">
+    <section class="hero-split">
+      <div class="hero-left">
+        <h1 class="hero-title">Hi — I’m <span class="accent">Bidhan</span>.</h1>
+        <p class="hero-sub">Helicopter engineer at IIT Kanpur. I build rotorcraft simulators, tinker with Android & Linux, and write stories & poems.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">Featured Project</a>
+          <a class="btn ghost" href="#stories">Read a Story</a>
+        </div>
+
+        <ul class="quick-list" aria-hidden="false">
+          <li><strong>Role:</strong> Helicopter Engineer</li>
+          <li><strong>Interests:</strong> PX4 · Gazebo · Android · Linux · Writing</li>
+        </ul>
+      </div>
+
+      <aside class="hero-right" aria-labelledby="about-me-heading">
+        <div class="photo-wrap">
+          <!-- Replace me.jpg with your photo file -->
+          <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo">
+        </div>
+
+        <section class="about-compact" aria-labelledby="about-me-heading">
+          <h2 id="about-me-heading">About Me</h2>
+          <p>I’m a rotorcraft engineer at <strong>IIT Kanpur</strong>. I work on flight simulation, control experiments, and embedded systems. I write on things that sit between machines and memory.</p>
+          <p class="muted">Want the CV? Click below.</p>
+          <div class="cta-row small">
+            <a class="btn primary small" href="#resume">Download Resume</a>
+            <a class="btn ghost small" href="#contact">Contact</a>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <!-- PROJECTS (placeholder) -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>PX4 Helicopter Simulator</h3>
+          <p class="muted">PX4 + Gazebo rotorcraft sim used for control experiments and rapid prototyping.</p>
+          <p class="meta"><strong>Tech:</strong> PX4 · Gazebo · C++ · ROS</p>
+          <p><a class="btn outline" href="https://github.com/bidhanar/helisim" target="_blank" rel="noopener">View on GitHub</a></p>
+        </article>
+
+        <article class="card">
+          <h3>Android Instrument Panel</h3>
+          <p class="muted">An Android app for telemetry and instrument visualization.</p>
+          <p class="meta"><strong>Tech:</strong> Kotlin · Android</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill">Rotorcraft Simulation</div>
+        <div class="skill">Flight Control</div>
+        <div class="skill">PX4 / Gazebo</div>
+        <div class="skill">C++ / ROS</div>
+        <div class="skill">Android / Kotlin</div>
+        <div class="skill">Linux / Embedded</div>
+        <div class="skill">Writing / Poetry</div>
+      </div>
+    </section>
+
+    <!-- STORIES -->
+    <section id="stories" class="section">
+      <h2>Stories</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Between Rotors</h3>
+          <p class="muted">A short story about control, uncertainty, and home.</p>
+          <p><a class="btn outline" href="#stories">Read</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- POEMS -->
+    <section id="poems" class="section">
+      <h2>Poems</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>On Rotors and Rain</h3>
+          <p class="muted">A brief poem — <em>Feb 26, 2025</em></p>
+          <p><a class="btn outline" href="#poems">Read</a></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="section">
+      <h2>Resume</h2>
+      <p class="muted">Download my resume as PDF (place <code>resume.pdf</code> in the repository root).</p>
+      <p><a class="btn primary" href="resume.pdf" download>Download Resume</a></p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you want to reach me: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/bidhanar" target="_blank" rel="noopener">@bidhanar</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="yr"></span> Bidhan Arya — made with ☕</small>
+    </div>
+  </footer>
+
+  <script>
+    // Small keyboard + smooth-scroll niceties
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
