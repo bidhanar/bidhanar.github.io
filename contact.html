@@ -1,15 +1,88 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Bidhan Arya</title>
+  <meta name="description" content="Contact page of Bidhan Arya — helicopter engineer and writer.">
   <link rel="stylesheet" href="styles-index.css">
+
+  <!-- Lucide icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Center the whole contact section */
+    .contact-grid {
+      display: grid;
+      justify-content: center;
+      justify-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      padding: 0.9rem 1.1rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 12px;
+      width: 100%;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(255,255,255,0.06);
+      transform: translateY(-3px);
+    }
+
+    .contact-item svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .contact-item a:hover {
+      color: var(--accent-2);
+      text-decoration: underline;
+    }
+
+    /* Center the heading and text */
+    h1, .muted {
+      text-align: center;
+    }
+
+    /* Slightly fade the intro text */
+    .muted {
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-inner">
       <a class="brand" href="index.html">Bidhan Arya</a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html">About</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="index.html">Home</a>
+        <a class="btn ghost small" href="projects.html">Projects</a>
+        <a class="btn ghost small" href="skills.html">Skills</a>
+        <a class="btn ghost small" href="stories.html">Stories</a>
+        <a class="btn ghost small" href="poems.html">Poems</a>
+        <a class="btn ghost small" href="about.html">About</a>
+        <a class="btn ghost small" href="resume.pdf">Resume</a>
+        <a class="btn ghost small" href="contact.html" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
@@ -17,17 +90,61 @@
   <main class="container">
     <section class="section card">
       <h1>Contact</h1>
-      <p class="muted">I prefer email for initial contact. You can also find me on GitHub.</p>
-      <ul>
-        <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-        <li>GitHub: <a href="https://github.com/bidhanar">@bidhanar</a></li>
-      </ul>
+      <p class="muted">I’m usually reachable via email — but you can also find me on these platforms:</p>
 
-      <h3>Optional: Contact form (static sites)</h3>
-      <p>If you want a form, we can add a Formspree or Netlify form next — tell me and I’ll add it.</p>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i data-lucide="mail"></i>
+          <a href="mailto:arya.bidhan1729@gmail.com" target="_blank" rel="noopener">arya.bidhan1729@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <i data-lucide="linkedin"></i>
+          <a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="contact-item">
+          <i data-lucide="github"></i>
+          <a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <div class="contact-item">
+          <i data-lucide="instagram"></i>
+          <a href="https://www.instagram.com/aryabidhan/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <div class="contact-item">
+          <i data-lucide="facebook"></i>
+          <a href="https://www.facebook.com/bidhan.arya.16" target="_blank" rel="noopener">Facebook</a>
+        </div>
+
+        <div class="contact-item">
+          <i data-lucide="youtube"></i>
+          <a href="https://www.youtube.com/@bidhanarya2513" target="_blank" rel="noopener">YouTube</a>
+        </div>
+
+        <div class="contact-item">
+          <!-- Custom ResearchGate icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-researchgate">
+            <circle cx="12" cy="12" r="10" stroke="var(--accent)" />
+            <path d="M9 8h3a2 2 0 1 1 0 4H9v4" stroke="var(--accent)" />
+            <path d="M14 12l2.5 4" stroke="var(--accent)" />
+          </svg>
+          <a href="https://www.researchgate.net/profile/Bidhan-Arya?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container"><small>© <span id='yearContact'></span> Bidhan</small></div></footer>
-  <script>document.getElementById('yearContact').textContent=new Date().getFullYear();</script>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="yearContact"></span> Bidhan Arya</small>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    document.getElementById('yearContact').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

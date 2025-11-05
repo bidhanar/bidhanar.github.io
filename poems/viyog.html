@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>वियोग — Bidhan Arya</title>
+  <meta name="description" content="वियोग — कविता by Bidhan Arya" />
+  <link rel="stylesheet" href="../styles-index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .poem-container { max-width:900px; margin:1.25rem auto; padding:1.25rem; }
+    .poem-meta { color:var(--muted); margin-bottom:0.6rem; }
+    .poem-text { font-family: 'Noto Serif Devanagari', serif; white-space: pre-wrap; font-size:1.07rem; line-height:1.9; color:var(--text); margin-top:0.6rem; }
+    .poem-actions { display:flex; gap:0.6rem; margin-top:0.9rem; flex-wrap:wrap; }
+    .muted-small { color:var(--muted); font-size:0.95rem; }
+    @media (max-width:720px){ .poem-container{ padding:0.9rem; } .poem-text{ font-size:1rem } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="../index.html">Home</a>
+        <a class="btn ghost small" href="../projects.html">Projects</a>
+        <a class="btn ghost small" href="../skills.html">Skills</a>
+        <a class="btn ghost small" href="../stories.html">Stories</a>
+        <a class="btn ghost small" href="../poems.html" aria-current="page">Poems</a>
+        <a class="btn ghost small" href="../about.html">About</a>
+        <a class="btn ghost small" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card poem-container">
+      <h1 style="margin-top:0">वियोग</h1>
+      <div class="poem-meta">कविता — 05 Nov 2025 • लेखक: Bidhan Arya</div>
+
+      <div class="poem-actions">
+        <button id="play" class="btn ghost small">Play (TTS)</button>
+        <button id="stop" class="btn ghost small">Stop</button>
+        <button id="download" class="btn outline small">Download PDF</button>
+        <a class="btn ghost small" href="../poems.html">Back to Poems</a>
+      </div>
+
+      <div id="poemText" class="poem-text" lang="hi">
+कभी यूं डूब जाता हूं मैं अपने उन खयालों में,
+वो जिनमें जान थी मेरी उन्हीं रेशम सी बालों में, 
+मेरे दिल के अंधेरों पर तेरे दिल के उजालों में, 
+वो शर्माता हो जिनसे फूल, उन कोमल सी गालों में,
+तेरी गुस्ताख आंखों पर हुए उन सब बवालों में, 
+किसी की जान जो ले ले तेरे मुस्कान के जालों में, 
+कभी यूं डूब जाता हूं मैं अपने उन खयालों में ।।
+
+मेरे बदरंग जीवन पे छिड़े हल्के गुलालों में, 
+वो लंबी कशमकश से पूर्ण जीवन के फिलहालों में, 
+जो मेरे दिल ने पूछे थे उन्हीं सच्चे सवालों में, 
+जो यूं ही कह दिए थे बस तेरे झूठे हवालों में,
+वो जिनमे बंध बैठा था, तेरे शातिर से चालों में,
+जो तुझ पर भूल बैठा था, मैं अपने उन जलालों में, 
+कभी यूं डूब जाता हूं मैं अपने उन खयालों में ।।
+
+जो तेरे साथ काटे थे, उन्हीं चारु से कालों में,
+वो जिनकी कद्र थी मुझको, उन्हीं फीके जमालो में, 
+मेरी छोटी सी बातों पे, तेरे उठते उबालों में, 
+तेरे उस क्रोध अग्नि पे, मेरे शीतल संभालो में, 
+तेरे उसे व्यर्थ सीरत से हुए बर्बाद हालों में,
+तू जिनको स्याह कर बैठी वो भावों के दलालों में, 
+कभी यूं डूब जाता हूं मैं अपने उन खयालों में ।।
+
+जो तुझसे कह नहीं पाया, वे शब्दों के मलालों में, 
+जो तुझसे प्यार करने से हुए उन सब कमालों में, 
+वो जिनमें प्यार होता है उन्हीं दिल के विशालों में, 
+तुझे मैं याद रखूंगा सभी जीवन के सालों में, 
+जो लोगों को सुनाऊंगा, हमारी उन मिसालों में,
+यूं डूब जाता हूं मैं अपने उन खयालों में ।।
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yr"></span> Bidhan</small></div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const playBtn = document.getElementById('play');
+    const stopBtn = document.getElementById('stop');
+    let utter;
+    function ensureVoicesLoaded() {
+      return new Promise(resolve => {
+        let voices = speechSynthesis.getVoices();
+        if (voices.length) return resolve(voices);
+        speechSynthesis.onvoiceschanged = () => resolve(speechSynthesis.getVoices());
+      });
+    }
+
+    playBtn.addEventListener('click', async () => {
+      if (window.speechSynthesis && !window.speechSynthesis.speaking) {
+        const text = document.getElementById('poemText').textContent.trim();
+        utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'hi-IN';
+        const voices = await ensureVoicesLoaded();
+        const hiVoice = voices.find(v => v.lang && v.lang.startsWith('hi')) || voices[0];
+        if (hiVoice) utter.voice = hiVoice;
+        utter.rate = 0.95;
+        window.speechSynthesis.speak(utter);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if (window.speechSynthesis && window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const elem = document.querySelector('.poem-container') || document.querySelector('article');
+      const opt = {
+        margin: 0.6,
+        filename: 'viyog.pdf',
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(elem).save();
+    });
+  </script>
+</body>
+</html>

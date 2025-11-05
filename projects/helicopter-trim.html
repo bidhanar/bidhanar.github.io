@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helicopter Trim Analysis — Bidhan Arya</title>
+  <link rel="stylesheet" href="../styles-index.css">
+</head>
+<body>
+  <header class="site-header"><div class="nav-inner">
+    <a class="brand" href="../index.html">Bidhan Arya</a>
+    <nav class="main-nav"><a class="btn ghost small" href="../projects.html">Projects</a></nav>
+  </div></header>
+
+  <main class="container">
+    <article class="section card">
+      <h1>Helicopter Trim Analysis</h1>
+      <p class="muted">Course Project — Apr 2023</p>
+
+      <h3>Overview</h3>
+      <p>Computed trim solutions for a rotor system and estimated dynamic properties using numerical methods.</p>
+
+      <h3>What I did</h3>
+      <ul>
+        <li>Balanced forces and moments on the hub and transferred them to the rotating frame.</li>
+        <li>Used Newmark’s algorithm (time-marching) to calculate blade flap frequency.</li>
+        <li>Computed trim parameters from an initial guess using residual methods and Jacobian matrices.</li>
+      </ul>
+
+      <p>Report: <a href="https://drive.google.com/file/d/1tOeJH3FtrIUsGNDoYSbP67z8yCpG0AOH/view?usp=drive_link" target="_blank" rel="noopener">drive.google.com (report)</a></p>
+      <p><a class="btn outline" href="../projects.html">Back to Projects</a></p>
+    </article>
+  </main>
+
+  <footer class="site-footer"><div class="container"><small>© <span id="yrTrim"></span> Bidhan</small></div></footer>
+  <script>document.getElementById('yrTrim').textContent = new Date().getFullYear();</script>
+</body>
+</html>

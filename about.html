@@ -1,52 +1,164 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Bidhan Arya</title>
+  <meta name="description" content="About Bidhan Arya — helicopter engineer (IIT Kanpur). Projects, roles, skills and contact." />
   <link rel="stylesheet" href="styles-index.css">
+  <style>
+    /* small about-page specific styles */
+    .about-grid { display:grid; grid-template-columns: 340px 1fr; gap:1.25rem; align-items:start; }
+    .profile-photo { width:100%; height:auto; border-radius:12px; display:block; object-fit:cover; }
+    .profile-card { padding:1rem; text-align:center; }
+    .profile-name { font-size:1.35rem; font-weight:800; margin:0.6rem 0 0.2rem; }
+    .profile-role { color:var(--muted); margin-bottom:0.6rem; }
+    .socials { display:flex; gap:0.5rem; justify-content:center; flex-wrap:wrap; margin-top:0.6rem; }
+    .socials a { padding:0.4rem 0.6rem; border-radius:8px; background: rgba(255,255,255,0.02); color:var(--muted); text-decoration:none; font-weight:600; }
+    .section-slim { margin-bottom:0.9rem; }
+    .two-col { display:grid; grid-template-columns: 1fr 1fr; gap:0.8rem; }
+    .list-compact { margin:0; padding-left:1.05rem; }
+    @media (max-width:980px){
+      .about-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    .tag { display:inline-block; padding:0.2rem 0.45rem; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); margin-right:0.35rem; font-size:0.85rem; }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-inner">
       <a class="brand" href="index.html">Bidhan Arya</a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="index.html">Home</a>
+        <a class="btn ghost small" href="projects.html">Projects</a>
+        <a class="btn ghost small" href="skills.html">Skills</a>
+        <a class="btn ghost small" href="stories.html">Stories</a>
+        <a class="btn ghost small" href="poems.html">Poems</a>
+        <a class="btn ghost small" href="about.html" aria-current="page">About</a>
+        <a class="btn ghost small" href="resume.pdf">Resume</a>
+        <a class="btn ghost small" href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <section class="section about-timeline card">
-      <h1>About — Timeline</h1>
-      <p class="muted">A detailed chronology from schooling to present. Replace these entries with your own precise dates and descriptions.</p>
+    <section class="section card">
+      <div class="about-grid">
+        <!-- LEFT: profile card -->
+        <aside class="profile-card">
+          <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo">
+          <div class="profile-name">Bidhan Arya</div>
+          <div class="profile-role">Dual Degree (B.Tech + M.Tech) — Aerospace Engineering, IIT Kanpur</div>
+          <div class="section-slim">
+            <strong>Current</strong>
+            <div class="muted-small">Project Engineer — rotorcraft & flight simulation (PX4 / Gazebo)</div>
+          </div>
 
-      <ol class="timeline">
-        <li>
-          <h3>2025 — Helicopter Engineer, IIT Kanpur</h3>
-          <p>Working on rotorcraft simulation and controls research. Leading experiments with PX4 and Gazebo for flight testing.</p>
-        </li>
-        <li>
-          <h3>2022 — M.Tech / B.Tech (Your Institution)</h3>
-          <p>Thesis title or project: brief description and outcomes.</p>
-        </li>
-        <li>
-          <h3>2018 — Schooling</h3>
-          <p>Brief notes about schooling, early interests in machines, coding, or writing.</p>
-        </li>
-      </ol>
+          <div style="margin-top:0.6rem">
+            <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+            <a class="btn ghost" href="contact.html" style="margin-left:0.6rem">Contact</a>
+          </div>
 
-      <h3>Biography</h3>
-      <p>Add a longer biography here: family background, research interests, why you write, influences, and future goals.</p>
+          <div class="socials" style="margin-top:0.9rem">
+            <a href="mailto:arya.bidhan1729@gmail.com">Email</a>
+            <a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.researchgate.net/profile/Bidhan-Arya?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+          </div>
 
-      <h3>Awards & Recognitions</h3>
-      <ul>
-        <li>List important awards, scholarships, or recognitions.</li>
-      </ul>
+          <div style="margin-top:0.9rem; font-size:0.95rem; color:var(--muted)">
+            <div><strong>Location</strong></div>
+            <div>IIT Kanpur / India</div>
+          </div>
+        </aside>
 
-      <h3>Publications & Talks</h3>
-      <p>You can list publications or link to a Google Scholar / ResearchGate profile.</p>
+        <!-- RIGHT: main about content -->
+        <div>
+          <h1 style="margin-top:0; margin-bottom:0.25rem">About</h1>
+          <p class="muted-small">I’m a rotorcraft-focused engineer (Dual Degree: Aerospace Engineering) at <strong>IIT Kanpur</strong>. I build flight simulation tools and experiments — I work with PX4, Gazebo, and embedded flight control systems. Outside of engineering I write short stories & poems, develop Android apps, and explore data science projects.</p>
+
+          <div style="margin-top:1rem" class="two-col">
+            <div>
+              <h3 style="margin-bottom:0.35rem">Education</h3>
+              <ul class="list-compact">
+                <li><strong>India</strong> — Dual Degree (B.Tech + M.Tech), Aerospace Engineering — IIT Kanpur (2019–Present)</li>
+                <li>CBSE Class 12 — Bijendra Public School, Purnea (2018) — 83.6%</li>
+                <li>BSEB Class 10 — Maa Kali High School, Purnea (2016) — 75.6%</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 style="margin-bottom:0.35rem">Selected Achievements</h3>
+              <ul class="list-compact">
+                <li>All India Rank <strong>104</strong> — GATE 2023 (Aerospace Engineering)</li>
+                <li>All India Rank <strong>2832</strong> — JEE Advanced 2019</li>
+                <li>All India Rank <strong>4101</strong> — JEE Main 2019</li>
+                <li>Shortlisted for SSB Interview — NDA-II (2019)</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr style="margin:1rem 0">
+
+          <h3>Projects & Research</h3>
+          <p class="muted-small">I work across embedded autopilots, flight simulation, Android apps and data analysis. A few highlights:</p>
+          <ul class="list-compact">
+            <li><strong>Helicopter Trim Analysis</strong> — trim computation, Newmark’s method, residual/Jacobian-based solution (Course project).</li>
+            <li><strong>Analyzing Steinmetz Dataset</strong> — neural data analysis with Pandas, Matplotlib, and TensorFlow (Summer project).</li>
+            <li><strong>Android apps</strong> — Treasure Hunt, BuzzerKar, ReadX (group reading + synchronized PDF reader).</li>
+            <li><a href="projects.html">See all projects</a></li>
+          </ul>
+
+          <hr style="margin:1rem 0">
+
+          <h3>Positions of Responsibility & Leadership</h3>
+          <p class="muted-small">Organizing experience across student councils and cultural events.</p>
+
+          <ul class="list-compact">
+            <li><strong>Institute Secretary — Media & Culture (MnC)</strong> (Apr 2022 – Apr 2023) — led a 4-tier team across 15 clubs (~300+ members); managed financial & executive affairs (capital ≈ ₹20 Lacs); organized large events (Freshers' Weekend, Inter-IIT).</li>
+            <li><strong>Mentor — Structure Super Combo (SnT)</strong> (May 2021 – Jul 2023) — mentored students in SAP2000 and project design.</li>
+            <li><strong>Secretary — Hindi Sahitya Sabha</strong> (2020–21) — curated literary events and wrote published poems.</li>
+            <li>Acted as (Acting) General Secretary and (Acting) President (Students Gymkhana) for select periods — managed auctions and campus operations.</li>
+          </ul>
+
+          <hr style="margin:1rem 0">
+
+          <h3>Technical Skills (snapshot)</h3>
+          <p class="muted-small">A short overview — full skills & chart on the <a href="skills.html">Skills page</a>.</p>
+          <div style="margin-top:0.4rem">
+            <span class="tag">Python</span>
+            <span class="tag">C / C++</span>
+            <span class="tag">Java (Android)</span>
+            <span class="tag">PX4</span>
+            <span class="tag">Gazebo</span>
+            <span class="tag">NumPy / Pandas</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Git</span>
+            <span class="tag">LaTeX</span>
+          </div>
+
+          <hr style="margin:1rem 0">
+
+          <h3>Interests & Writing</h3>
+          <p class="muted-small">I write short fiction and poetry (Hindi & English), tinker with Android apps and small data projects, and enjoy chess (chess.com: <a href="https://www.chess.com/member/trona_1729" target="_blank" rel="noopener">trona_1729</a>).</p>
+
+          <div style="margin-top:1rem; display:flex; gap:0.6rem; flex-wrap:wrap">
+            <a class="btn outline" href="poems.html">Read Poems</a>
+            <a class="btn outline" href="stories.html">Read Stories</a>
+            <a class="btn outline" href="projects.html">All Projects</a>
+          </div>
+
+        </div>
+      </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container"><small>© <span id='yearAbout'></span> Bidhan</small></div></footer>
-  <script>document.getElementById('yearAbout').textContent=new Date().getFullYear();</script>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yrAbout"></span> Bidhan</small></div>
+  </footer>
+
+  <script>document.getElementById('yrAbout').textContent = new Date().getFullYear();</script>
 </body>
 </html>
