@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Projects — Bidhan Arya</title>
+  <link rel="stylesheet" href="styles-index.css">
+</head>
+<body>
+  <!-- header (reuse same header markup as index.html) -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Bidhan Arya</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="stories.html">Stories</a>
+        <a href="poems.html">Poems</a>
+        <a href="resume.pdf">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Projects</h1>
+      <p class="muted">A curated list of my engineering projects. Click a project to read details.</p>
+
+      <div class="cards">
+        <!-- COPY this block for each project and update href/title/summary -->
+        <article class="card">
+          <h3><a href="projects/px4-heli.html">PX4 Helicopter Simulator</a></h3>
+          <p class="muted">PX4 + Gazebo rotorcraft simulation for control experiments.</p>
+          <p class="meta"><strong>Tech:</strong> PX4 · Gazebo · C++ · ROS</p>
+          <p><a class="btn outline" href="projects/px4-heli.html">Read details</a></p>
+        </article>
+        <!-- end block -->
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© <span id="yearp"></span> Bidhan Arya</small></div></footer>
+  <script>document.getElementById('yearp').textContent=new Date().getFullYear();</script>
+</body>
+</html>

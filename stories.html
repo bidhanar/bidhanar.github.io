@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stories — Bidhan Arya</title>
+  <link rel="stylesheet" href="styles-index.css">
+</head>
+<body>
+  <header class="site-header">...same header markup...</header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Stories</h1>
+      <p class="muted">Longer pieces and short fiction. Click to read.</p>
+      <div class="cards">
+        <!-- copy block per story -->
+        <article class="card">
+          <h3><a href="stories/between-rotors.html">Between Rotors</a></h3>
+          <p class="muted">A short story about control, uncertainty, and home. — 2024</p>
+          <p><a class="btn outline" href="stories/between-rotors.html">Read</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© <span id=\"years\"></span> Bidhan</small></div></footer>
+  <script>document.getElementById('years').textContent=new Date().getFullYear();</script>
+</body>
+</html>
