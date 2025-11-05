@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Poems — Bidhan Arya</title>
+  <link rel="stylesheet" href="styles-index.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Bidhan Arya</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="stories.html">Stories</a><a href="poems.html" aria-current="page">Poems</a><a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1>Poems</h1>
+      <p class="muted">Short poems and experimental pieces.</p>
+      <div class="cards">
+        <article class="card"><h3><a href="poems/on-rotors-and-rain.html">On Rotors and Rain</a></h3>
+          <p class="muted">Poem — 26 Feb 2025</p>
+          <p><a class="btn outline" href="poems/on-rotors-and-rain.html">Read</a></p></article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><small>© <span id=\"yearPoems\"></span> Bidhan</small></div></footer>
+  <script>document.getElementById('yearPoems').textContent=new Date().getFullYear();</script>
+</body>
+</html>

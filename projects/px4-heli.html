@@ -13,8 +13,11 @@
       <nav class="main-nav">
         <a href="../index.html">Home</a>
         <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../skills.html">Skills</a>
         <a href="../stories.html">Stories</a>
         <a href="../poems.html">Poems</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -23,14 +26,20 @@
     <article class="section card">
       <h1>PX4 Helicopter Simulator</h1>
       <p class="muted">PX4 · Gazebo · ROS · Simulation</p>
-      <p><strong>Summary:</strong> A lightweight rotorcraft simulation environment built to test controllers and logging for rotorcraft experiments.</p>
 
-      <h3>Details</h3>
-      <p>Write a longer description here: the problem you solved, architecture, key files, results, and any screenshots (place them in /assets and reference as ../assets/...).</p>
+      <p><strong>Summary:</strong> A lightweight rotorcraft simulation environment built to test controllers and logging for rotorcraft experiments. The project includes example Gazebo worlds, PX4 parameter sets tuned for rotorcraft, and tools to log and replay flights for analysis.</p>
 
-      <h3>How to run</h3>
+      <h3>Features</h3>
+      <ul>
+        <li>Rotorcraft-specific Gazebo models and worlds</li>
+        <li>PX4 parameter sets and sample missions</li>
+        <li>Data logging, plotting scripts, and replay utilities</li>
+      </ul>
+
+      <h3>How to run (short)</h3>
       <pre><code>git clone https://github.com/bidhanar/helisim
-# run instructions...
+cd helisim
+# follow README.md in the repo to build and run the Gazebo worlds
 </code></pre>
 
       <p><a class="btn outline" href="https://github.com/bidhanar/helisim" target="_blank" rel="noopener">View repository</a>
@@ -38,7 +47,7 @@
     </article>
   </main>
 
-  <footer class="site-footer"><div class="container"><small>© <span id="yearpp"></span> Bidhan Arya</small></div></footer>
-  <script>document.getElementById('yearpp').textContent=new Date().getFullYear();</script>
+  <footer class="site-footer"><div class="container"><small>© <span id="yearpp2"></span> Bidhan Arya</small></div></footer>
+  <script>document.getElementById('yearpp2').textContent=new Date().getFullYear();</script>
 </body>
 </html>

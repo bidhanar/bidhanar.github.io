@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles-index.css">
 </head>
 <body>
-  <!-- header (reuse same header markup as index.html) -->
   <header class="site-header">
     <div class="nav-inner">
       <a class="brand" href="index.html">Bidhan Arya</a>
@@ -17,6 +16,7 @@
         <a href="skills.html">Skills</a>
         <a href="stories.html">Stories</a>
         <a href="poems.html">Poems</a>
+        <a href="about.html">About</a>
         <a href="resume.pdf">Resume</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -36,11 +36,20 @@
           <p class="meta"><strong>Tech:</strong> PX4 · Gazebo · C++ · ROS</p>
           <p><a class="btn outline" href="projects/px4-heli.html">Read details</a></p>
         </article>
-        <!-- end block -->
+
+        <article class="card">
+          <h3><a href="projects/android-instrument-panel.html">Android Instrument Panel</a></h3>
+          <p class="muted">A lightweight Android app for flight instruments and telemetry display.</p>
+          <p class="meta"><strong>Tech:</strong> Android · Kotlin · Bluetooth</p>
+          <p><a class="btn outline" href="projects/android-instrument-panel.html">Read details</a></p>
+        </article>
+
+        <!-- add more project blocks here -->
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="container"><small>© <span id="yearp"></span> Bidhan Arya</small></div></footer>
-  <script>document.getElementById('yearp').textContent=new Date().getFullYear();</script>
+
+  <footer class="site-footer"><div class="container"><small>© <span id="yearp2"></span> Bidhan Arya</small></div></footer>
+  <script>document.getElementById('yearp2').textContent=new Date().getFullYear();</script>
 </body>
 </html>

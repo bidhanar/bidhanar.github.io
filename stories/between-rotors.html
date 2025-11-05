@@ -5,7 +5,14 @@
   <link rel="stylesheet" href="../styles-index.css">
 </head>
 <body>
-  <header class="site-header">...header...</header>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav">
+        <a href="../index.html">Home</a><a href="../projects.html">Projects</a><a href="../stories.html" aria-current="page">Stories</a><a href="../poems.html">Poems</a><a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <article class="section card">
@@ -13,15 +20,14 @@
       <p class="muted">Short story — 2024</p>
 
       <div class="story-body">
-        <p>Start the story here. Use paragraphs for breaks. For long-form, the .card container gives comfortable reading width.</p>
-        <!-- multiple paragraphs -->
+        <p>Between rotors the world becomes a compass of small decisions. The instruments hum in numbers but the mind wants to tell stories.</p>
+        <p>When the sun drops below the ridgeline, the control loop slows and memory sharpens its edges—solder and tea and the smell of damp tape. — (expand here)</p>
       </div>
 
       <p><a class="btn" href="../stories.html">Back to stories</a></p>
     </article>
   </main>
-
-  <footer class="site-footer"><div class="container"><small>© <span id=\"years2\"></span> Bidhan</small></div></footer>
-  <script>document.getElementById('years2').textContent=new Date().getFullYear();</script>
+  <footer class="site-footer"><div class="container"><small>© <span id=\"yearStories2\"></span> Bidhan</small></div></footer>
+  <script>document.getElementById('yearStories2').textContent=new Date().getFullYear();</script>
 </body>
 </html>

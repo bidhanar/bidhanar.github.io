@@ -5,35 +5,48 @@
   <link rel="stylesheet" href="styles-index.css">
 </head>
 <body>
-  <header class="site-header">...header...</header>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Bidhan Arya</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
     <section class="section about-timeline card">
       <h1>About — Timeline</h1>
-      <p class="muted">A detailed chronology from schooling to present.</p>
+      <p class="muted">A detailed chronology from schooling to present. Replace these entries with your own precise dates and descriptions.</p>
 
       <ol class="timeline">
         <li>
           <h3>2025 — Helicopter Engineer, IIT Kanpur</h3>
-          <p>Short description of role and responsibilities.</p>
+          <p>Working on rotorcraft simulation and controls research. Leading experiments with PX4 and Gazebo for flight testing.</p>
         </li>
         <li>
-          <h3>2022 — Master's/Undergrad (Institution)</h3>
-          <p>Thesis/project details, notable achievements.</p>
+          <h3>2022 — M.Tech / B.Tech (Your Institution)</h3>
+          <p>Thesis title or project: brief description and outcomes.</p>
         </li>
         <li>
-          <h3>2018 — Schooling / High School</h3>
-          <p>Key events, interests developed (e.g., early robotics, coding).</p>
+          <h3>2018 — Schooling</h3>
+          <p>Brief notes about schooling, early interests in machines, coding, or writing.</p>
         </li>
-        <!-- add more li entries as you like -->
       </ol>
 
-      <h3>Long-form biography</h3>
-      <p>Add a longer narrative here: family background, journey into rotorcraft, why you write, influences, etc.</p>
+      <h3>Biography</h3>
+      <p>Add a longer biography here: family background, research interests, why you write, influences, and future goals.</p>
+
+      <h3>Awards & Recognitions</h3>
+      <ul>
+        <li>List important awards, scholarships, or recognitions.</li>
+      </ul>
+
+      <h3>Publications & Talks</h3>
+      <p>You can list publications or link to a Google Scholar / ResearchGate profile.</p>
     </section>
   </main>
-
-  <footer class="site-footer"><div class="container"><small>© <span id="yeara"></span> Bidhan</small></div></footer>
-  <script>document.getElementById('yeara').textContent=new Date().getFullYear();</script>
+  <footer class="site-footer"><div class="container"><small>© <span id='yearAbout'></span> Bidhan</small></div></footer>
+  <script>document.getElementById('yearAbout').textContent=new Date().getFullYear();</script>
 </body>
 </html>
