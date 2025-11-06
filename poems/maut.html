@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>मौत — Bidhan Arya</title>
+  <meta name="description" content="मौत — कविता by Bidhan Arya" />
+  <link rel="stylesheet" href="../styles-index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .poem-container { max-width:900px; margin:1.25rem auto; padding:1.25rem; }
+    .poem-meta { color:var(--muted); margin-bottom:0.6rem; }
+    .poem-text { font-family: 'Noto Serif Devanagari', serif; white-space: pre-wrap; font-size:1.07rem; line-height:1.9; color:var(--text); margin-top:0.6rem; }
+    .poem-actions { display:flex; gap:0.6rem; margin-top:0.9rem; flex-wrap:wrap; }
+    .muted-small { color:var(--muted); font-size:0.95rem; }
+    @media (max-width:720px){ .poem-container{ padding:0.9rem; } .poem-text{ font-size:1rem } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="../index.html">Home</a>
+        <a class="btn ghost small" href="../projects.html">Projects</a>
+        <a class="btn ghost small" href="../skills.html">Skills</a>
+        <a class="btn ghost small" href="../stories.html">Stories</a>
+        <a class="btn ghost small" href="../poems.html" aria-current="page">Poems</a>
+        <a class="btn ghost small" href="../about.html">About</a>
+        <a class="btn ghost small" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card poem-container">
+      <h1 style="margin-top:0">मौत</h1>
+      <div class="poem-meta">कविता — 06 Nov 2025 • लेखक: Bidhan Arya</div>
+
+      <div class="poem-actions">
+        <button id="play" class="btn ghost small">Play (TTS)</button>
+        <button id="stop" class="btn ghost small">Stop</button>
+        <button id="download" class="btn outline small">Download PDF</button>
+        <a class="btn ghost small" href="../poems.html">Back to Poems</a>
+      </div>
+
+      <div id="poemText" class="poem-text" lang="hi">
+जिंदगी की आस ने लाचार बना दिया, 
+प्यार के अहसास ने बेजार बना दिया, 
+आदमी तो बहुत काम के थे हम भी, 
+पर मौत की तलाश ने बेकार बना दिया।
+
+जमाने ने करी मेरी नीलामी, इस नीलामी में विश्वास ढूंढता हूं।
+हजार हुई जब चुभे, तो उसमें परिहास ढूंढता हूं। 
+लिए रातों को साथ में, लगा कालीख हाथ में, 
+बांह पसारे मौत में अब प्रकाश ढूंढता हूं।
+
+लबों पर हंसी रखकर भुलाना इतिहास चाहता हूं, 
+खुद को मार डालने को, मैं कारावास चाहता हूं। 
+प्यार बहुत किया था अब तो नफरत की बारी थी, 
+लंबी रात सी उस मौत मे बनवास चाहता हूं।
+
+सपनों को मार के सपने पूरे चाहता हूं, 
+भरी हुई इस दुनिया में लोग अधूरे चाहता हूं। 
+लंबी झूठी जुमलों को भी सच मानने लगा हूं अब, 
+उन झूठों को सच करने के राह बटेरे चाहता हूं।
+
+तपती हुई उस गर्मी का एहसास चाहता हूं,
+गंगा से भी न बुछे, वह प्यास चाहता हूं।
+जिंदगी तो मैंने भी बहुत जी ली है,
+पर अब मैं इस जीवन का आभास चाहता हूं।
+
+खाना आज काम बन गया है उसमें फिर से स्वाद चाहता हूं,
+जिससे कभी मन ना भरे वैसी मुराद चाहता हूं,
+थक गया हूं दौड़ते भागते इस दुनिया में मैं,
+मुकम्मल सी इस दुनिया में, मैं खुद को बर्बाद चाहता हूं।
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yr"></span> Bidhan</small></div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const playBtn = document.getElementById('play');
+    const stopBtn = document.getElementById('stop');
+    let utter;
+    function ensureVoicesLoaded() {
+      return new Promise(resolve => {
+        let voices = speechSynthesis.getVoices();
+        if (voices.length) return resolve(voices);
+        speechSynthesis.onvoiceschanged = () => resolve(speechSynthesis.getVoices());
+      });
+    }
+
+    playBtn.addEventListener('click', async () => {
+      if (window.speechSynthesis && !window.speechSynthesis.speaking) {
+        const text = document.getElementById('poemText').textContent.trim();
+        utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'hi-IN';
+        const voices = await ensureVoicesLoaded();
+        const hiVoice = voices.find(v => v.lang && v.lang.startsWith('hi')) || voices[0];
+        if (hiVoice) utter.voice = hiVoice;
+        utter.rate = 0.95;
+        window.speechSynthesis.speak(utter);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if (window.speechSynthesis && window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const elem = document.querySelector('.poem-container') || document.querySelector('article');
+      const opt = {
+        margin: 0.6,
+        filename: 'maut.pdf',
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(elem).save();
+    });
+  </script>
+</body>
+</html>

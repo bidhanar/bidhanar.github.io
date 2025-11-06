@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lies — Bidhan Arya</title>
+  <meta name="description" content="Lies — prose by Bidhan Arya" />
+  <link rel="stylesheet" href="../styles-index.css">
+  <style>
+    /* Keep font consistent with the rest of the site (same as Jack) */
+    .story-body {
+      font-family: inherit;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #e2e6e6;
+      text-align: justify;
+    }
+    .story-body p { margin-bottom: 1.4rem; }
+    .story-body a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 150ms ease;
+    }
+    .story-body a:hover { color: var(--accent-2); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="../index.html">Home</a>
+        <a class="btn ghost small" href="../projects.html">Projects</a>
+        <a class="btn ghost small" href="../skills.html">Skills</a>
+        <a class="btn ghost small" href="../stories.html" aria-current="page">Stories</a>
+        <a class="btn ghost small" href="../poems.html">Poems</a>
+        <a class="btn ghost small" href="../about.html">About</a>
+        <a class="btn ghost small" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card story-container">
+      <h1 style="margin-top:0">Lies</h1>
+      <div class="story-meta">Prose — reflective — by Bidhan Arya</div>
+
+      <div class="story-actions">
+        <a class="btn outline" id="download" href="#">Download PDF</a>
+        <a class="btn ghost" href="../stories.html">Back to Stories</a>
+      </div>
+
+      <div class="story-body" id="storyText">
+        <p>It was Christmas, he was waiting for Santa to come with his gift, but more than that, he wanted to see Santa, the person who brought him happiness every year, knew exactly what he wanted, showed him that he deserved those gifts, make him feel magical. So he hid behind the table waiting for Santa to come. And Santa did arrive, as two people, his parents, slowly putting the gift beneath the Christmas tree, happy, to delude their kid.</p>
+
+        <p>What did they know about magic? Once you see the truth, everything that the magic stands for is questioned. He was not a passive aggressive child so he got out from hiding at once and asked his parents why were they putting his gift instead of Santa? They had no answer; they were apparently doing it as a surprise, but little did they know that they were hiding the grave truth from their child, that nothing magical exists, the world is just a sad place where people try to create magic, through illusions, through lies.</p>
+
+        <p>But then not all lies are good; some are deemed bad — why? Why is any lie better than any other? Because it doesn't hurt as much? But no one knows what small lies do to a naive mind. How big the lie is depends on the person being lied to.</p>
+
+        <p>The child thinking all this, became furious and ran back to his room, throwing away everything that he had received the previous years as a gift from Santa, because that day he knew, Santa was dead. Magic was dead. That day he grew up, to a world where lies bring comfort in some cases and pain in other, differentiated by just perspectives. He knew Santa would never come again, and everything he had worked to be a good kid wouldn't matter, because his parents couldn't lie anymore, couldn't hide their approval in form of Santa's gift. He slept. Tired from all the thoughts, he believed it was okay to lie if you make someone happy, and that it didn't matter what values of the other person those lies were a part of.</p>
+
+        <p>He realised that lies were just — for what would one do with a truth? No one would have any value in them, for everything finds an exception and lies are the tool that hide them. He realised lying is special, conveying the truth, that's easy, all the animals do it, but lying effectively, looking the person in their eyes and leading them to a path of deception was skillful. He decided to lie for the rest of his life.</p>
+
+        <p>He got up in the morning, with a rejuvenated spirit, went directly to his parents' room, and told them, "Thank you for being my Santa for all these years."</p>
+
+        <p>Bidhan Arya</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yrLies"></span> Bidhan</small></div>
+  </footer>
+
+  <script>document.getElementById('yrLies').textContent = new Date().getFullYear();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById('download').addEventListener('click', () => {
+      const elem = document.querySelector('.story-container') || document.querySelector('article');
+      const opt = { margin: 0.6, filename: 'lies.pdf', jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' } };
+      html2pdf().set(opt).from(elem).save();
+    });
+  </script>
+</body>
+</html>

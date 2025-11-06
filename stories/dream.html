@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dream — Bidhan Arya</title>
+  <meta name="description" content="Dream — prose by Bidhan Arya" />
+  <link rel="stylesheet" href="../styles-index.css">
+  <style>
+    /* Keep font consistent with the rest of the site (same as Jack) */
+    .story-body {
+      font-family: inherit;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #e2e6e6;
+      text-align: justify;
+    }
+    .story-body p { margin-bottom: 1.4rem; }
+    .story-body a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 150ms ease;
+    }
+    .story-body a:hover { color: var(--accent-2); }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="../index.html">Home</a>
+        <a class="btn ghost small" href="../projects.html">Projects</a>
+        <a class="btn ghost small" href="../skills.html">Skills</a>
+        <a class="btn ghost small" href="../stories.html" aria-current="page">Stories</a>
+        <a class="btn ghost small" href="../poems.html">Poems</a>
+        <a class="btn ghost small" href="../about.html">About</a>
+        <a class="btn ghost small" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card story-container">
+      <h1 style="margin-top:0">Dream</h1>
+      <div class="story-meta">Prose — contemplative — by Bidhan Arya</div>
+
+      <div class="story-actions">
+        <a class="btn outline" id="download" href="#">Download PDF</a>
+        <a class="btn ghost" href="../stories.html">Back to Stories</a>
+      </div>
+
+      <div class="story-body" id="storyText">
+        <p>Imagine you wake up a morning, it’s 7:00 A.M., the sun was supposed to be up, radiating energy and life around you, but all you see is darkness, like it's the middle of the night.</p>
+
+        <p>You check to see if your clock malfunctioned, you cross reference it with other clocks only to find that the time is indeed 7:00 A.M. and it has stopped. You go out of your room, hoping to make more sense of what is happening, but as you look at the dark sky, you can’t see the moon, or the stars; it is probably cloudy, or at least that’s all you can infer. You knock on your friend’s door, it is open. You enter only to find her sleeping. You try to wake her up, she doesn’t! Water, pain, light, nothing wakes her up. But you know she lives, because she breathes. You check rooms to find yourself surrounded by all these sleeping people.</p>
+
+        <p>You are scared! Scared to be alone, surrounded by living corpses. You take out your cycle, trying to find out the reason for this. You go out cycling around. You can’t see one person in sight, nor a dog, a peacock or an insect. Everything is silent, except the wind, that gushes down as you tear through, pushing your pedals to go somewhere where life exists. Tired, devastated, hopeless and scared, you go back to your room, close it and start crying. You fall asleep while crying.</p>
+
+        <p>You are woken up after sometime by a knock on the door. You check the time, it’s still 7:00 A.M. and it’s still dark outside. Alas! It wasn’t a dream. You are skeptical about opening the door thinking what if I open the door and there is someone dangerous outside? What if they kill me? Wait, should I even be scared of death at this point, isn’t it better than what is going on, what is going to go on. Is all life better than death? Is any life better than death? Do I believe in afterlife?</p>
+
+        <p>I don’t think there is a being who controls what we get and what we endure, but I do think nature is playing a symphony, where everyone is a note, some more energetic than others, some long, some short, some beautiful alone, some hard to get by. But every note is prominent to understand the complete music piece. I myself am one of the notes, finding my place in this orchestra. I meet other notes on my way through this life, some complete me, others make my music sour. Can I hold on to the note that does construct me? It sure would be pleasant to hear to, for a moment. I need the destructive tunes to help me understand and appreciate the good tunes when they arrive. I would want to forever hold on to these tunes, but that would destroy the melody that is being sung in the background.</p>
+
+        <p>Who is the audience? Maybe it’s just me, because every time I look back and see the tunes, I am grateful for the music that has been playing throughout. I like the songs, but there are some parts of those songs that I like to wait for when I start. Every time that part ends, I am left with a feeling not of emptiness, but of fulfillment, for my life got a little better than it was one song ago!</p>
+
+        <p>Thinking all this, I finally decide to open the door. I go there, unlock the hatch and pull the door towards me. I am shocked! — for you stand in front of me, smiling as blissfully as I remember the last time. I take you into my arms, close my eyes and listen to the melody. I open my eyes to see your face radiating in the sun, your eyes reflecting my soul. I look at the time, it’s 7:01 A.M.</p>
+
+        <p>Bidhan Arya</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yrDream2"></span> Bidhan</small></div>
+  </footer>
+
+  <script>document.getElementById('yrDream2').textContent = new Date().getFullYear();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script>
+    document.getElementById('download').addEventListener('click', () => {
+      const elem = document.querySelector('.story-container') || document.querySelector('article');
+      const opt = { margin: 0.6, filename: 'dream.pdf', jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' } };
+      html2pdf().set(opt).from(elem).save();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>हिम्मत — Bidhan Arya</title>
+  <meta name="description" content="हिम्मत — कविता by Bidhan Arya" />
+  <link rel="stylesheet" href="../styles-index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .poem-container { max-width:900px; margin:1.25rem auto; padding:1.25rem; }
+    .poem-meta { color:var(--muted); margin-bottom:0.6rem; }
+    .poem-text { font-family: 'Noto Serif Devanagari', serif; white-space: pre-wrap; font-size:1.07rem; line-height:1.9; color:var(--text); margin-top:0.6rem; }
+    .poem-actions { display:flex; gap:0.6rem; margin-top:0.9rem; flex-wrap:wrap; }
+    .muted-small { color:var(--muted); font-size:0.95rem; }
+    @media (max-width:720px){ .poem-container{ padding:0.9rem; } .poem-text{ font-size:1rem } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="../index.html">Home</a>
+        <a class="btn ghost small" href="../projects.html">Projects</a>
+        <a class="btn ghost small" href="../skills.html">Skills</a>
+        <a class="btn ghost small" href="../stories.html">Stories</a>
+        <a class="btn ghost small" href="../poems.html" aria-current="page">Poems</a>
+        <a class="btn ghost small" href="../about.html">About</a>
+        <a class="btn ghost small" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card poem-container">
+      <h1 style="margin-top:0">हिम्मत</h1>
+      <div class="poem-meta">कविता — 06 Nov 2025 • लेखक: Bidhan Arya</div>
+
+      <div class="poem-actions">
+        <button id="play" class="btn ghost small">Play (TTS)</button>
+        <button id="stop" class="btn ghost small">Stop</button>
+        <button id="download" class="btn outline small">Download PDF</button>
+        <a class="btn ghost small" href="../poems.html">Back to Poems</a>
+      </div>
+
+      <div id="poemText" class="poem-text" lang="hi">
+कई रंग देखी, कई छाव देखें
+इस छल से पूर्ण विश्व में कई भाव देखें । 
+ये मुश्किलों की राह में, अटूट मेरी चाह में, 
+कई मुकाम आएंगे, जो मुझको भेद जाएंगे। 
+पर सूर्य बल को साथ में, लिए दिलों को हाथ में, 
+मैं रात को हराऊंगा और खुद को जीत जाऊंगा। 
+ये मुश्किलें हजार है, गमों का ये बाजार है 
+वो पीड़ का समुद्र था और मन भी मेरा छुद्र था। 
+कामना अनेक थे, वो किस्मतों के लेख थे।
+वो भाग्य को था मोड़ना, था किस्मतों को छोड़ना,
+खुदा की ऐसी बेखुदी, सुधा भी पूरी बेसुधी 
+पर मंजिलों की राग में, सुखों को सारे त्याग मैं, 
+निकल पड़ा था राह में, वो जीत रस की चाह में, 
+वो मंजिलें थी मछलियां, अर्जुन का मैं श्रृंगार था, 
+दिल की थी ये वेदना, था नैन उसका भेदना,
+कोशिशें समेट कर, मैं हिम्मतें लपेटकर, 
+मैं भीड़ गया पहाड़ से, वो शेर की दहाड़ से ,
+पहाड़ ऐसे झुक गया, वो शेर भी था रुक गया ,
+चुनौतियों की सेज से, मैं जल रहा था तेज से,
+वो मंजिलें थी दिलरुबा, था प्यार उनका बेवफा,
+आशिक मैं बेखुमार था, वो इश्क बेशुमार था,
+संसार मेरे डर मे था, वो हार मेरे स्वर में था, 
+हार के प्रहार से था जल रहा मैं प्यार से, 
+रक्त मेरा बह गया था, वक्त मेरा सह गया था,
+जीत के हुंकार से और हार के व्यवहार से, 
+मंजिलों की मार से विजय के उस बाहर से
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yr"></span> Bidhan</small></div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const playBtn = document.getElementById('play');
+    const stopBtn = document.getElementById('stop');
+    let utter;
+    function ensureVoicesLoaded() {
+      return new Promise(resolve => {
+        let voices = speechSynthesis.getVoices();
+        if (voices.length) return resolve(voices);
+        speechSynthesis.onvoiceschanged = () => resolve(speechSynthesis.getVoices());
+      });
+    }
+
+    playBtn.addEventListener('click', async () => {
+      if (window.speechSynthesis && !window.speechSynthesis.speaking) {
+        const text = document.getElementById('poemText').textContent.trim();
+        utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'hi-IN';
+        const voices = await ensureVoicesLoaded();
+        const hiVoice = voices.find(v => v.lang && v.lang.startsWith('hi')) || voices[0];
+        if (hiVoice) utter.voice = hiVoice;
+        utter.rate = 0.95;
+        window.speechSynthesis.speak(utter);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if (window.speechSynthesis && window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const elem = document.querySelector('.poem-container') || document.querySelector('article');
+      const opt = {
+        margin: 0.6,
+        filename: 'himmat.pdf',
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(elem).save();
+    });
+  </script>
+</body>
+</html>

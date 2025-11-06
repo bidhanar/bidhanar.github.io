@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>पेशवा — Bidhan Arya</title>
+  <meta name="description" content="पेशवा — कविता by Bidhan Arya" />
+  <link rel="stylesheet" href="../styles-index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .poem-container { max-width:900px; margin:1.25rem auto; padding:1.25rem; }
+    .poem-meta { color:var(--muted); margin-bottom:0.6rem; }
+    .poem-text { font-family: 'Noto Serif Devanagari', serif; white-space: pre-wrap; font-size:1.07rem; line-height:1.9; color:var(--text); margin-top:0.6rem; }
+    .poem-actions { display:flex; gap:0.6rem; margin-top:0.9rem; flex-wrap:wrap; }
+    .muted-small { color:var(--muted); font-size:0.95rem; }
+    @media (max-width:720px){ .poem-container{ padding:0.9rem; } .poem-text{ font-size:1rem } }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Bidhan Arya</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="btn ghost small" href="../index.html">Home</a>
+        <a class="btn ghost small" href="../projects.html">Projects</a>
+        <a class="btn ghost small" href="../skills.html">Skills</a>
+        <a class="btn ghost small" href="../stories.html">Stories</a>
+        <a class="btn ghost small" href="../poems.html" aria-current="page">Poems</a>
+        <a class="btn ghost small" href="../about.html">About</a>
+        <a class="btn ghost small" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="card poem-container">
+      <h1 style="margin-top:0">पेशवा</h1>
+      <div class="poem-meta">कविता — 06 Nov 2025 • लेखक: Bidhan Arya</div>
+
+      <div class="poem-actions">
+        <button id="play" class="btn ghost small">Play (TTS)</button>
+        <button id="stop" class="btn ghost small">Stop</button>
+        <button id="download" class="btn outline small">Download PDF</button>
+        <a class="btn ghost small" href="../poems.html">Back to Poems</a>
+      </div>
+
+      <div id="poemText" class="poem-text" lang="hi">
+इतने से में रो मत तुम इतने से में छोड़ो मत,
+दिन उनका था, रण अपना है, हिम्मत अपनी तोड़ो मत,
+
+तुम धीर धरो, चिंता न करो, एक दिन फिर ऐसा आएगा, 
+वीर शिवा के घोड़ों ने जैसे मुगलों को रौंदा था,
+चीख पड़ेगी मुग़ल सल्तनत, बस ध्वज अपना लहराएगा।
+
+अपमानो के लोहे से, तलवारों का निर्माण करो, 
+चोट पड़ी है दिल पे जो हर चोट पे तुम संग्राम करो, 
+अर्जुन तनिक ना घबराओ, तुम गांडीव से संधान करो | 
+
+युद्ध है ये, योद्धा हो तुम, इस बात का तुम पैगाम बनो, 
+वीर शिवा के वंशज हो तुम, उनकी तुम पहचान बनो, 
+जिसकी एक ललकार से सबके दिल में हाहाकार मचे, 
+वीर शिवा के वीर जवानों, उस सेना का ऐलान बनो।
+
+सारी मेहनत, सारी आदत, बस एक क्षण में ही छूट गए, 
+जिन सपनों को जिया था, वो एक पल में ही टूट गए, 
+महादेव का काल बनो तुम, काल भी एक विकराल बनो, 
+स्वर्ग पर गर वो राज करें, तुम असुरों का पाताल बनो, 
+शिवा कि सम्मान बनो तुम मराठाओं कि तुम ढाल बनो।
+
+आज लहू जो बहा तुम्हारा, कल ज्वाला बन जाएगा, 
+फिर खुद को भस्म कर के ही वो, लौह कृपाण बन पाएगा, 
+पर्वत से भी नहीं डरो तुम, मांझी की हुंकार बनो, 
+महादेव के भक्त हो तुम, उस तांडव के अलंकार बनो 
+तुम मराठा, तुम पेशवा, शिवा के तुम्हें अहंकार बनो।
+
+अपमानों के तीरों से, जो रण में तुझको भेदा है, 
+तेरी मां के वीर आंचल के दिल को जिसने छेदा है, 
+वीर शिवा शमशेर बनो तुम, महादेव के प्राण बनो, 
+चीर कलेजा, रक्तअर्पण से, मां का तुम अभिमान बनो। 
+विकट समय है, दृढ़ निश्चय की अभी बहुत दरकार है, 
+अभी समय है, अभी रुको तुम, बाद में बस जायकारें हैं 
+पेशवा की बलिदान बनो तुम, उनकी परमार्थ का शान बनो, 
+जय मराठा, जय पेशवा, जब तक रहो महान बनो, 
+तुम जब तक रहो महान बनो।
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><small>© <span id="yr"></span> Bidhan</small></div>
+  </footer>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script>
+    const playBtn = document.getElementById('play');
+    const stopBtn = document.getElementById('stop');
+    let utter;
+    function ensureVoicesLoaded() {
+      return new Promise(resolve => {
+        let voices = speechSynthesis.getVoices();
+        if (voices.length) return resolve(voices);
+        speechSynthesis.onvoiceschanged = () => resolve(speechSynthesis.getVoices());
+      });
+    }
+
+    playBtn.addEventListener('click', async () => {
+      if (window.speechSynthesis && !window.speechSynthesis.speaking) {
+        const text = document.getElementById('poemText').textContent.trim();
+        utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'hi-IN';
+        const voices = await ensureVoicesLoaded();
+        const hiVoice = voices.find(v => v.lang && v.lang.startsWith('hi')) || voices[0];
+        if (hiVoice) utter.voice = hiVoice;
+        utter.rate = 0.95;
+        window.speechSynthesis.speak(utter);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if (window.speechSynthesis && window.speechSynthesis.speaking) window.speechSynthesis.cancel();
+    });
+
+    document.getElementById('download').addEventListener('click', () => {
+      const elem = document.querySelector('.poem-container') || document.querySelector('article');
+      const opt = {
+        margin: 0.6,
+        filename: 'peshwa.pdf',
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(elem).save();
+    });
+  </script>
+</body>
+</html>
