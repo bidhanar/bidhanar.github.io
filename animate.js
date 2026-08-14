@@ -25,6 +25,12 @@
     return;
   }
 
+  // threshold:0 — fire as soon as ANY part of a target intersects, not once
+  // a fraction of its own height is visible. A percentage threshold breaks
+  // for tall single-block targets (e.g. .story-container wrapping an
+  // entire long story): on a phone-height viewport, the visible slice can
+  // be a couple percent of the element's total height and never cross a
+  // 12% bar, leaving it stuck at opacity:0 — a permanently blank page.
   var io = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
@@ -34,7 +40,7 @@
         }
       });
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0, rootMargin: '0px 0px -40px 0px' }
   );
 
   targets.forEach(function (el) { io.observe(el); });

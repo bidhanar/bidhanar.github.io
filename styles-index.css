@@ -28,7 +28,7 @@ html,body{height:100%}
    one value scales body copy, headings, chips, nav, etc. together. Neither
    the first commit nor any commit since ever set this explicitly (it was
    always the browser's implicit 16px); bumped up a notch for readability. */
-html{ scroll-behavior:smooth; font-size:20px; }
+html{ scroll-behavior:smooth; font-size:17.5px; }
 body{
   margin:0;
   background:var(--bg);
