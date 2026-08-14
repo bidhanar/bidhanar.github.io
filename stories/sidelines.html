@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sidelines — Bidhan Arya</title>
   <meta name="description" content="Sidelines — short story by Bidhan Arya">
-  <link rel="stylesheet" href="../styles-index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="../styles-index.css">
   <style>
     /* Consistent story typography — same as other story pages */
     .story-body {
@@ -28,11 +29,9 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a class="btn ghost small" href="../index.html">Home</a>
         <a class="btn ghost small" href="../projects.html">Projects</a>
-        <a class="btn ghost small" href="../skills.html">Skills</a>
         <a class="btn ghost small" href="../stories.html">Stories</a>
         <a class="btn ghost small" href="../poems.html">Poems</a>
         <a class="btn ghost small" href="../about.html">About</a>
-        <a class="btn ghost small" href="../resume.pdf">Resume</a>
         <a class="btn ghost small" href="../contact.html">Contact</a>
       </nav>
     </div>
@@ -41,7 +40,6 @@
   <main class="container">
     <article class="section card">
       <h1>Sidelines</h1>
-      <p class="muted">Short story</p>
 
       <div class="story-body">
         <p>Today was like every other day. He woke up, got ready, and went back to his routine, but as he reached, he saw people all dressed up as TV characters. Maybe it was a themed day today. He couldn’t go back and change, for he had neither the time nor a costume already tucked in, so he decided to roll with it. He introduced his character as a side actor, always hidden away in plain sight. People complained, rightfully, but he said, “What is the purpose of this—of this theme, of the characters, or the actual actors? Is it not to instill qualities in people, is it not to shape the society we live in? Yes, an argument can be made that they just showcase society at its current position, but I argue the characters take it one small step ahead, because that’s how changes occur anyway. To actually build something meaningful, or even worthy of meaning, it must be built one step at a time—because things that can change fast, seldom do. Taking that as my argument, the person who most inspires me is the side actor, playing a character that is very replaceable. But is it really? The actor is replaceable, the character not so much.</p>
@@ -68,5 +66,10 @@
   </footer>
 
   <script>document.getElementById('yearSidelines').textContent = new Date().getFullYear();</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="../animate.js" defer></script>
+  <script src="../reader-zoom.js" defer></script>
+  <script src="../book-export.js" defer></script>
 </body>
 </html>

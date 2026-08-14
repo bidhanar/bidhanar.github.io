@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Bidhan Arya</title>
   <meta name="description" content="Projects by Bidhan Arya — demos, repos and descriptions.">
-  <link rel="stylesheet" href="styles-index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles-index.css">
 </head>
 <body>
   <header class="site-header">
@@ -14,11 +15,9 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a class="btn ghost small" href="index.html">Home</a>
         <a class="btn ghost small" href="projects.html" aria-current="page">Projects</a>
-        <a class="btn ghost small" href="skills.html">Skills</a>
         <a class="btn ghost small" href="stories.html">Stories</a>
         <a class="btn ghost small" href="poems.html">Poems</a>
         <a class="btn ghost small" href="about.html">About</a>
-        <a class="btn ghost small" href="resume.pdf">Resume</a>
         <a class="btn ghost small" href="contact.html">Contact</a>
       </nav>
     </div>
@@ -87,6 +86,12 @@
           <p>Android app + Python solver to find solutions for WordScape puzzles.</p>
         </article>
 
+        <article class="card">
+          <h3><a href="https://bidhanar.github.io/dumb-charades-simple/" target="_blank" rel="noopener">Dumb Charades</a></h3>
+          <p class="meta"><a href="https://github.com/bidhanar/dumb-charades-simple" target="_blank" rel="noopener">GitHub</a></p>
+          <p>A simple browser-based charades word-prompt generator — pick a category and get a random word or phrase to act out.</p>
+        </article>
+
       </div>
     </section>
   </main>
@@ -96,5 +101,6 @@
   </footer>
 
   <script>document.getElementById('yrProjects').textContent = new Date().getFullYear();</script>
+  <script src="animate.js" defer></script>
 </body>
 </html>

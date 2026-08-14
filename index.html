@@ -4,21 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Bidhan Arya — Rotor & Verse</title>
-  <meta name="description" content="Bidhan Arya — helicopter engineer at IIT Kanpur. Projects, Android & Linux experiments, stories and poetry." />
-  <link rel="stylesheet" href="styles-index.css">
+  <meta name="description" content="Bidhan Arya — embedded engineer at EndureAir. Projects, Android & Linux experiments, stories and poetry." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles-index.css">
 </head>
 <body>
   <header class="site-header" id="top">
     <div class="nav-inner">
       <a class="brand" href="index.html">Bidhan Arya</a>
       <nav aria-label="Main navigation" class="main-nav">
-        <a class="btn ghost small" href="index.html">Home</a>
+        <a class="btn ghost small" href="index.html" aria-current="page">Home</a>
         <a class="btn ghost small" href="projects.html">Projects</a>
-        <a class="btn ghost small" href="skills.html">Skills</a>
         <a class="btn ghost small" href="stories.html">Stories</a>
         <a class="btn ghost small" href="poems.html">Poems</a>
         <a class="btn ghost small" href="about.html">About</a>
-        <a class="btn ghost small" href="resume.pdf">Resume</a>
         <a class="btn ghost small" href="contact.html">Contact</a>
       </nav>
     </div>
@@ -30,7 +29,7 @@
       <div class="hero-left">
         <h1 class="hero-title">Hi — I’m <span class="accent">Bidhan</span>.</h1>
         <p class="hero-sub">
-          Helicopter engineer at IIT Kanpur. I build rotorcraft simulators, tinker with Android & Linux, and write stories & poems.
+          Embedded engineer at EndureAir. I work on the ArduPilot codebase and physics simulations, tinker with Android & Linux, and write stories & poems.
         </p>
 
         <div class="cta-row">
@@ -38,31 +37,35 @@
           <a class="btn ghost" href="stories.html">Read My Writing</a>
         </div>
 
-        <ul class="quick-list">
-          <li><strong>Role:</strong> Helicopter Engineer</li>
-          <li><strong>Interests:</strong> PX4 · Gazebo · Android · Linux · Writing</li>
-        </ul>
+        <div class="quick-facts" aria-label="Quick facts">
+          <span class="chip role">Embedded Engineer</span>
+          <span class="chip">ArduPilot</span>
+          <span class="chip">Gazebo</span>
+          <span class="chip">Android</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Writing</span>
+        </div>
       </div>
 
-      <aside class="hero-right" aria-labelledby="about-me-heading">
+      <aside class="hero-right">
         <div class="photo-wrap">
           <!-- Replace me.jpg with your actual photo -->
           <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo">
         </div>
-
-        <section class="about-compact" aria-labelledby="about-me-heading">
-          <h2 id="about-me-heading">About Me</h2>
-          <p>
-            I’m a rotorcraft engineer at <strong>IIT Kanpur</strong>. I work on flight simulation, control experiments, and embedded systems. 
-            I write about the thin line between machines and memory.
-          </p>
-          <p class="muted">Want the CV? Click below.</p>
-          <div class="cta-row small">
-            <a class="btn primary small" href="resume.pdf" download>Download Resume</a>
-            <a class="btn ghost small" href="contact.html">Contact</a>
-          </div>
-        </section>
       </aside>
+    </section>
+
+    <section class="section">
+      <div class="about-compact" aria-labelledby="about-me-heading">
+        <h2 id="about-me-heading">About Me</h2>
+        <p>
+          I’m an embedded engineer at <strong>EndureAir</strong>. I work on the ArduPilot codebase and physics simulations.
+          I write about the thin line between machines and memory.
+        </p>
+        <div class="cta-row small">
+          <a class="btn ghost small" href="contact.html">Contact</a>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -75,5 +78,6 @@
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
+  <script src="animate.js" defer></script>
 </body>
 </html>

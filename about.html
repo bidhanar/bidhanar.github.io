@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Bidhan Arya</title>
-  <meta name="description" content="About Bidhan Arya — helicopter engineer (IIT Kanpur). Projects, roles, skills and contact." />
-  <link rel="stylesheet" href="styles-index.css">
+  <meta name="description" content="About Bidhan Arya — embedded engineer at EndureAir. Projects, roles and contact." />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles-index.css">
   <style>
     /* small about-page specific styles */
     .about-grid { display:grid; grid-template-columns: 340px 1fr; gap:1.25rem; align-items:start; }
@@ -22,7 +23,6 @@
       .about-grid { grid-template-columns: 1fr; }
       .two-col { grid-template-columns: 1fr; }
     }
-    .tag { display:inline-block; padding:0.2rem 0.45rem; border-radius:999px; background:rgba(255,255,255,0.03); color:var(--muted); margin-right:0.35rem; font-size:0.85rem; }
   </style>
 </head>
 <body>
@@ -32,11 +32,9 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a class="btn ghost small" href="index.html">Home</a>
         <a class="btn ghost small" href="projects.html">Projects</a>
-        <a class="btn ghost small" href="skills.html">Skills</a>
         <a class="btn ghost small" href="stories.html">Stories</a>
         <a class="btn ghost small" href="poems.html">Poems</a>
         <a class="btn ghost small" href="about.html" aria-current="page">About</a>
-        <a class="btn ghost small" href="resume.pdf">Resume</a>
         <a class="btn ghost small" href="contact.html">Contact</a>
       </nav>
     </div>
@@ -52,11 +50,10 @@
           <div class="profile-role">Dual Degree (B.Tech + M.Tech) — Aerospace Engineering, IIT Kanpur</div>
           <div class="section-slim">
             <strong>Current</strong>
-            <div class="muted-small">Project Engineer — rotorcraft & flight simulation (PX4 / Gazebo)</div>
+            <div class="muted-small">Embedded Engineer — EndureAir Pvt. Ltd. (ArduPilot / physics simulation)</div>
           </div>
 
           <div style="margin-top:0.6rem">
-            <a class="btn primary" href="resume.pdf" download>Download Resume</a>
             <a class="btn ghost" href="contact.html" style="margin-left:0.6rem">Contact</a>
           </div>
 
@@ -76,7 +73,7 @@
         <!-- RIGHT: main about content -->
         <div>
           <h1 style="margin-top:0; margin-bottom:0.25rem">About</h1>
-          <p class="muted-small">I’m a rotorcraft-focused engineer (Dual Degree: Aerospace Engineering) at <strong>IIT Kanpur</strong>. I build flight simulation tools and experiments — I work with PX4, Gazebo, and embedded flight control systems. Outside of engineering I write short stories & poems, develop Android apps, and explore data science projects.</p>
+          <p class="muted-small">I’m an embedded engineer at <strong>EndureAir Pvt. Ltd.</strong>, working on the ArduPilot codebase and physics simulations for autonomous flight. I hold a Dual Degree (Aerospace Engineering) from IIT Kanpur, where I previously worked on rotorcraft flight simulation. Outside of engineering I write short stories & poems, develop Android apps, and explore data science projects.</p>
 
           <div style="margin-top:1rem" class="two-col">
             <div>
@@ -124,23 +121,6 @@
 
           <hr style="margin:1rem 0">
 
-          <h3>Technical Skills (snapshot)</h3>
-          <p class="muted-small">A short overview — full skills & chart on the <a href="skills.html">Skills page</a>.</p>
-          <div style="margin-top:0.4rem">
-            <span class="tag">Python</span>
-            <span class="tag">C / C++</span>
-            <span class="tag">Java (Android)</span>
-            <span class="tag">PX4</span>
-            <span class="tag">Gazebo</span>
-            <span class="tag">NumPy / Pandas</span>
-            <span class="tag">TensorFlow</span>
-            <span class="tag">Linux</span>
-            <span class="tag">Git</span>
-            <span class="tag">LaTeX</span>
-          </div>
-
-          <hr style="margin:1rem 0">
-
           <h3>Interests & Writing</h3>
           <p class="muted-small">I write short fiction and poetry (Hindi & English), tinker with Android apps and small data projects, and enjoy chess (chess.com: <a href="https://www.chess.com/member/trona_1729" target="_blank" rel="noopener">trona_1729</a>).</p>
 
@@ -160,5 +140,6 @@
   </footer>
 
   <script>document.getElementById('yrAbout').textContent = new Date().getFullYear();</script>
+  <script src="animate.js" defer></script>
 </body>
 </html>
