@@ -6,99 +6,120 @@
   <meta name="description" content="Short stories by Bidhan Arya.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles-index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Serif+Devanagari:wght@400;600&amp;display=swap">
+  <meta name="theme-color" content="#0c0d12">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
     <div class="nav-inner">
-      <a class="brand" href="index.html">Bidhan Arya</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="btn ghost small" href="index.html">Home</a>
-        <a class="btn ghost small" href="projects.html">Projects</a>
-        <a class="btn ghost small" href="stories.html" aria-current="page">Stories</a>
-        <a class="btn ghost small" href="poems.html">Poems</a>
-        <a class="btn ghost small" href="about.html">About</a>
-        <a class="btn ghost small" href="contact.html">Contact</a>
+      <a class="brand" href="index.html" aria-label="Bidhan Arya, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9d5c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><circle cx="16" cy="16" r="14.5" fill="none" stroke="url(#bm-g)" stroke-opacity=".35" stroke-dasharray="2 3"/><g class="brand-rotor" fill="url(#bm-g)"><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(120 16 16)"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(240 16 16)"/></g><circle cx="16" cy="16" r="3" fill="#0c0d12" stroke="url(#bm-g)" stroke-width="1.6"/></svg><span class="brand-name">Bidhan Arya</span></a>
+      <nav class="main-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span class="nav-num">01</span>Home</a>
+        <a href="projects.html"><span class="nav-num">02</span>Projects</a>
+        <a href="stories.html" aria-current="page"><span class="nav-num">03</span>Stories</a>
+        <a href="poems.html"><span class="nav-num">04</span>Poems</a>
+        <a href="about.html"><span class="nav-num">05</span>About</a>
+        <a href="contact.html"><span class="nav-num">06</span>Contact</a>
       </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="bar"></span><span class="bar"></span></button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h1>Stories</h1>
-      <p class="muted">Longer pieces and short fiction. Click to read.</p>
-      <div class="cards">
-	<article class="card story-card">
-	  <h3><a href="stories/the-girlfriend.html">The Girlfriend</a></h3>
-	  <div class="meta muted-small">Short story — reflective / contemporary</div>
-	  <p class="muted-small" style="margin-top:0.5rem">John boards a bus to nowhere, trying to outrun the memories that haunt him.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/the-girlfriend.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/the-saviour.html">The Saviour</a></h3>
-	  <div class="meta muted-small">Short story — psychological thriller / dark fiction</div>
-	  <p class="muted-small" style="margin-top:0.5rem">A story about a man who saves people, at least in the long run.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/the-saviour.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/the-sorcerer.html">The Sorcerer</a></h3>
-	  <div class="meta muted-small">Short story — mythic / speculative</div>
-	  <p class="muted-small" style="margin-top:0.5rem">A tale of Susan, justice and magic.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/the-sorcerer.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/lies.html">Lies</a></h3>
-	  <div class="meta muted-small">Prose — reflective</div>
-	  <p class="muted-small" style="margin-top:0.5rem">A short piece about childhood magic, truth, and the choices we make after the illusion breaks.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/lies.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/the-dreamer.html">The Dreamer</a></h3>
-	  <div class="meta muted-small">Short story — speculative / psychological</div>
-	  <p class="muted-small" style="margin-top:0.5rem">A story about a troubled boy, a subconscious machine, and a last-ditch attempt to alter fate.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/the-dreamer.html">Read</a></p>
-	</article>
-
-	<article class="card">
-	  <h3><a href="stories/sidelines.html">Sidelines</a></h3>
-	  <p class="muted">Prose</p>
-	  <p><a class="btn outline" href="stories/sidelines.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/the-prisoner.html">The Prisoner</a></h3>
-	  <div class="meta muted-small">Short story — reflective / contemporary</div>
-	  <p class="muted-small" style="margin-top:0.5rem">Garry learns to find meaning and connection inside imprisonment — a meditation on freedom and choice.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/the-prisoner.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/dream.html">Dream</a></h3>
-	  <div class="meta muted-small">Prose — contemplative</div>
-	  <p class="muted-small" style="margin-top:0.5rem">A short prose on waking to a dark world, within or outside?</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/dream.html">Read</a></p>
-	</article>
-
-	<article class="card story-card">
-	  <h3><a href="stories/the-immortal.html">The Immortal</a></h3>
-	  <div class="meta muted-small">Short story — speculative / mythic</div>
-	  <p class="muted-small" style="margin-top:0.5rem">A timeless tale of a man who cannot die, and who wants exactly what he can't have.</p>
-	  <p style="margin-top:0.6rem"><a class="btn outline" href="stories/the-immortal.html">Read</a></p>
-	</article>
-
-	<article class="card">
-	  <h3><a href="stories/jack.html">Jack</a></h3>
-	  <p class="muted">Short story — 2025</p>
-	  <p><a class="btn outline" href="stories/jack.html">Read</a></p>
-	</article>
-      </div>
-    </section>
+  <main class="container" id="main">
+    <header class="page-head">
+      <p class="eyebrow">Fiction &amp; prose</p>
+      <h1 class="page-title">Short <em>fiction.</em></h1>
+      <p class="page-lede">Longer pieces and short fiction — psychological thrillers, mythic tales and quiet reflections. Pick one and settle in.</p>
+      <span class="page-count">10 pieces · ~84 min of reading</span>
+    </header>
+    <ol class="story-list">
+        <li class="story-row"><a href="stories/the-girlfriend.html">
+          <span class="row-num">01</span>
+          <span class="row-main"><span class="row-title">The Girlfriend</span><span class="row-log">John boards a bus to nowhere, trying to outrun the memories that haunt him.</span></span>
+          <span class="row-meta"><span>Short story · reflective · contemporary</span><span class="row-time">7 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/the-saviour.html">
+          <span class="row-num">02</span>
+          <span class="row-main"><span class="row-title">The Saviour</span><span class="row-log">A story about a man who saves people, at least in the long run.</span></span>
+          <span class="row-meta"><span>Short story · psychological thriller · dark fiction</span><span class="row-time">17 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/the-sorcerer.html">
+          <span class="row-num">03</span>
+          <span class="row-main"><span class="row-title">The Sorcerer</span><span class="row-log">A tale of Susan, justice and magic.</span></span>
+          <span class="row-meta"><span>Short story · mythic · speculative</span><span class="row-time">13 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/lies.html">
+          <span class="row-num">04</span>
+          <span class="row-main"><span class="row-title">Lies</span><span class="row-log">A short piece about childhood magic, truth, and the choices we make after the illusion breaks.</span></span>
+          <span class="row-meta"><span>Prose · reflective</span><span class="row-time">2 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/the-dreamer.html">
+          <span class="row-num">05</span>
+          <span class="row-main"><span class="row-title">The Dreamer</span><span class="row-log">A story about a troubled boy, a subconscious machine, and a last-ditch attempt to alter fate.</span></span>
+          <span class="row-meta"><span>Short story · speculative · psychological</span><span class="row-time">9 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/sidelines.html">
+          <span class="row-num">06</span>
+          <span class="row-main"><span class="row-title">Sidelines</span><span class="row-log excerpt">“Today was like every other day.”</span></span>
+          <span class="row-meta"><span>Prose</span><span class="row-time">3 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/the-prisoner.html">
+          <span class="row-num">07</span>
+          <span class="row-main"><span class="row-title">The Prisoner</span><span class="row-log">Garry learns to find meaning and connection inside imprisonment — a meditation on freedom and choice.</span></span>
+          <span class="row-meta"><span>Short story · reflective · contemporary</span><span class="row-time">8 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/dream.html">
+          <span class="row-num">08</span>
+          <span class="row-main"><span class="row-title">Dream</span><span class="row-log">A short prose on waking to a dark world, within or outside?</span></span>
+          <span class="row-meta"><span>Prose · contemplative</span><span class="row-time">3 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/the-immortal.html">
+          <span class="row-num">09</span>
+          <span class="row-main"><span class="row-title">The Immortal</span><span class="row-log">A timeless tale of a man who cannot die, and who wants exactly what he can&#x27;t have.</span></span>
+          <span class="row-meta"><span>Short story · speculative · mythic</span><span class="row-time">11 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+        <li class="story-row"><a href="stories/jack.html">
+          <span class="row-num">10</span>
+          <span class="row-main"><span class="row-title">Jack</span><span class="row-log excerpt">“Jack was a lonely person.”</span></span>
+          <span class="row-meta"><span>Short story · 2025</span><span class="row-time">11 min read</span></span>
+          <span class="row-arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a></li>
+    </ol>
   </main>
-  <footer class="site-footer"><div class="container"><small>© <span id=\"yearStories\"></span> Bidhan</small></div></footer>
-  <script>document.getElementById('yearStories').textContent=new Date().getFullYear();</script>
-  <script src="animate.js" defer></script>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-sign">
+        <a class="footer-brand" href="index.html">Bidhan Arya</a>
+        <p>Embedded engineer at EndureAir. Writing about the thin line between machines and memory.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="projects.html">Projects</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html">About</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="mailto:arya.bidhan1729@gmail.com">Email</a><a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a><a href="contact.html">All links</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <small>© <span data-year>2026</span> Bidhan Arya — made with ☕</small>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+  <script src="site.js" defer></script>
 </body>
 </html>

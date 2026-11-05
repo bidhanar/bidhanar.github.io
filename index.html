@@ -3,81 +3,220 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Bidhan Arya — Rotor & Verse</title>
+  <title>Bidhan Arya — Rotor Verse</title>
   <meta name="description" content="Bidhan Arya — embedded engineer at EndureAir. Projects, Android & Linux experiments, stories and poetry." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles-index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Serif+Devanagari:wght@400;600&amp;display=swap">
+  <meta name="theme-color" content="#0c0d12">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header" id="top">
     <div class="nav-inner">
-      <a class="brand" href="index.html">Bidhan Arya</a>
-      <nav aria-label="Main navigation" class="main-nav">
-        <a class="btn ghost small" href="index.html" aria-current="page">Home</a>
-        <a class="btn ghost small" href="projects.html">Projects</a>
-        <a class="btn ghost small" href="stories.html">Stories</a>
-        <a class="btn ghost small" href="poems.html">Poems</a>
-        <a class="btn ghost small" href="about.html">About</a>
-        <a class="btn ghost small" href="contact.html">Contact</a>
+      <a class="brand" href="index.html" aria-label="Bidhan Arya, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9d5c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><circle cx="16" cy="16" r="14.5" fill="none" stroke="url(#bm-g)" stroke-opacity=".35" stroke-dasharray="2 3"/><g class="brand-rotor" fill="url(#bm-g)"><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(120 16 16)"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(240 16 16)"/></g><circle cx="16" cy="16" r="3" fill="#0c0d12" stroke="url(#bm-g)" stroke-width="1.6"/></svg><span class="brand-name">Bidhan Arya</span></a>
+      <nav class="main-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page"><span class="nav-num">01</span>Home</a>
+        <a href="projects.html"><span class="nav-num">02</span>Projects</a>
+        <a href="stories.html"><span class="nav-num">03</span>Stories</a>
+        <a href="poems.html"><span class="nav-num">04</span>Poems</a>
+        <a href="about.html"><span class="nav-num">05</span>About</a>
+        <a href="contact.html"><span class="nav-num">06</span>Contact</a>
       </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="bar"></span><span class="bar"></span></button>
     </div>
   </header>
 
   <!-- HERO / LANDING -->
-  <main class="page container">
-    <section class="hero-split">
-      <div class="hero-left">
-        <h1 class="hero-title">Hi — I’m <span class="accent">Bidhan</span>.</h1>
-        <p class="hero-sub">
-          Embedded engineer at EndureAir. I work on the ArduPilot codebase and physics simulations, tinker with Android & Linux, and write stories & poems.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn primary" href="projects.html">Featured Project</a>
-          <a class="btn ghost" href="stories.html">Read My Writing</a>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="wrap hero-inner">
+        <div class="hero-left">
+          <p class="eyebrow">Embedded engineer · EndureAir · Writer</p>
+          <h1 class="hero-title" id="hero-title" data-split>Hi, I’m <span class="accent">Bidhan.</span></h1>
+          <p class="hero-lede">I write <span class="rotator" data-rotate="flight code|physics simulations|Android apps|short stories|Hindi poetry">flight code</span><span class="rotator-caret" aria-hidden="true"></span></p>
+          <p class="hero-sub">Embedded engineer at EndureAir. I work on the ArduPilot codebase and physics simulations, tinker with Android &amp; Linux, and write stories &amp; poems.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="projects.html">Featured projects <span class="arr">→</span></a>
+            <a class="btn ghost" href="stories.html">Read my writing</a>
+          </div>
+          <div class="quick-facts" aria-label="Quick facts">
+            <span class="chip role">Embedded Engineer</span>
+            <span class="chip">ArduPilot</span>
+            <span class="chip">Gazebo</span>
+            <span class="chip">Android</span>
+            <span class="chip">Linux</span>
+            <span class="chip">Writing</span>
+          </div>
         </div>
-
-        <div class="quick-facts" aria-label="Quick facts">
-          <span class="chip role">Embedded Engineer</span>
-          <span class="chip">ArduPilot</span>
-          <span class="chip">Gazebo</span>
-          <span class="chip">Android</span>
-          <span class="chip">Linux</span>
-          <span class="chip">Writing</span>
-        </div>
+        <aside class="hero-right">
+          <div class="portrait" data-tilt-portrait>
+            <div class="portrait-ring" aria-hidden="true"></div>
+            <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo" width="1024" height="1280">
+            <span class="orbit-chip c1" aria-hidden="true"><b>●</b> ArduPilot</span>
+            <span class="orbit-chip c2" aria-hidden="true"><b>▲</b> Physics sim</span>
+            <span class="orbit-chip c3" aria-hidden="true">कविता ✦</span>
+          </div>
+        </aside>
       </div>
-
-      <aside class="hero-right">
-        <div class="photo-wrap">
-          <!-- Replace me.jpg with your actual photo -->
-          <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo">
-        </div>
-      </aside>
+      <a class="scroll-cue" href="#worlds">Scroll<span></span></a>
     </section>
 
-    <section class="section">
-      <div class="about-compact" aria-labelledby="about-me-heading">
-        <h2 id="about-me-heading">About Me</h2>
-        <p>
-          I’m an embedded engineer at <strong>EndureAir</strong>. I work on the ArduPilot codebase and physics simulations.
-          I write about the thin line between machines and memory.
-        </p>
-        <div class="cta-row small">
-          <a class="btn ghost small" href="contact.html">Contact</a>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track"><span class="marquee-item mono">ArduPilot</span><span class="marquee-item">Short fiction</span><span class="marquee-item mono">Gazebo</span><span class="marquee-item">कविता</span><span class="marquee-item mono">Physics simulation</span><span class="marquee-item">Rotorcraft dynamics</span><span class="marquee-item mono">C++ · Python · Java</span><span class="marquee-item">Android</span><span class="marquee-item mono">Linux</span><span class="marquee-item">Hindi poetry</span><span class="marquee-item mono">ArduPilot</span><span class="marquee-item">Short fiction</span><span class="marquee-item mono">Gazebo</span><span class="marquee-item">कविता</span><span class="marquee-item mono">Physics simulation</span><span class="marquee-item">Rotorcraft dynamics</span><span class="marquee-item mono">C++ · Python · Java</span><span class="marquee-item">Android</span><span class="marquee-item mono">Linux</span><span class="marquee-item">Hindi poetry</span></div>
+    </div>
+
+    <section class="block" id="worlds" aria-labelledby="worlds-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 class="block-title" id="worlds-title">Two worlds, <em>one desk.</em></h2>
+          <p class="muted" style="max-width:26rem;margin:0">I work on the ArduPilot codebase and physics simulations. I write about the thin line between machines and memory.</p>
+        </div>
+        <div class="worlds">
+          <article class="card world rotor">
+            <svg class="world-art" viewBox="0 0 200 200" aria-hidden="true">
+              <defs><linearGradient id="ra" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#4fd6e0"/></linearGradient></defs>
+              <circle cx="100" cy="100" r="92" fill="none" stroke="url(#ra)" stroke-opacity=".35" stroke-dasharray="3 6"/>
+              <circle cx="100" cy="100" r="64" fill="none" stroke="url(#ra)" stroke-opacity=".2"/>
+              <g class="blades" fill="url(#ra)" fill-opacity=".8">
+                <rect x="96" y="10" width="8" height="90" rx="4"/>
+                <rect x="96" y="10" width="8" height="90" rx="4" transform="rotate(90 100 100)"/>
+                <rect x="96" y="10" width="8" height="90" rx="4" transform="rotate(180 100 100)"/>
+                <rect x="96" y="10" width="8" height="90" rx="4" transform="rotate(270 100 100)"/>
+              </g>
+              <circle cx="100" cy="100" r="11" fill="#0c0d12" stroke="url(#ra)" stroke-width="3"/>
+            </svg>
+            <span class="kicker">01 — Rotor</span>
+            <h3>Engineering</h3>
+            <p>Autopilot code and physics simulation at EndureAir, rotorcraft trim analysis at IIT Kanpur, and Android apps that ran campus events.</p>
+            <div class="world-stats">
+              <div class="stat"><b data-count="11">11</b><span>Projects</span></div>
+              <div class="stat"><b data-count="700" data-suffix="+">700+</b><span>Event participants</span></div>
+            </div>
+            <div class="cta-row"><a class="btn ghost" href="projects.html">Explore projects <span class="arr">→</span></a></div>
+          </article>
+          <article class="card world verse">
+            <span class="world-art" aria-hidden="true">क</span>
+            <span class="kicker">02 — Verse</span>
+            <h3>Writing</h3>
+            <p>Short fiction in English and poetry in Hindi: psychological thrillers, mythic tales and quiet reflections.</p>
+            <div class="world-stats">
+              <div class="stat"><b data-count="10">10</b><span>Stories</span></div>
+              <div class="stat"><b data-count="9">9</b><span>Poems</span></div>
+            </div>
+            <div class="cta-row"><a class="btn ghost" href="stories.html">Stories <span class="arr">→</span></a><a class="btn ghost" href="poems.html">Poems <span class="arr">→</span></a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="feat-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 class="block-title" id="feat-title">Selected <em>work.</em></h2>
+          <a class="link-arrow" href="projects.html">All projects →</a>
+        </div>
+        <div class="cards three">
+          <article class="card feature linked">
+            <div class="top" style="display:flex;justify-content:space-between;align-items:center"><span class="project-tag research">Research</span><span class="num">01</span></div>
+            <h3><a href="projects/helicopter-trim.html">Helicopter Trim Analysis</a></h3>
+            <p>Balanced forces and moments, Newmark time-marching for flap frequency, and a residual/Jacobian solve for the trim parameters.</p>
+            <div class="foot"><span>Course project · 2023</span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </article>
+          <article class="card feature linked">
+            <div class="top" style="display:flex;justify-content:space-between;align-items:center"><span class="project-tag android">Android</span><span class="num">02</span></div>
+            <h3><a href="projects/treasure-hunt.html">Treasure Hunt App</a></h3>
+            <p>Java + Parse Server app with admin, coordinator and guest roles, built for a campus event with 700+ participants.</p>
+            <div class="foot"><span>Android · 2022</span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </article>
+          <article class="card feature linked">
+            <div class="top" style="display:flex;justify-content:space-between;align-items:center"><span class="project-tag code">Live demo</span><span class="num">03</span></div>
+            <h3><a href="projects/clocks.html">Four 24-Clocks</a></h3>
+            <p>The current time drawn by 96 tiny analogue clocks that slowly form and dissolve. Runs right in your browser.</p>
+            <div class="foot"><span>p5.js · interactive</span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block quote-block" aria-label="Quote">
+      <div class="wrap">
+        <p class="eyebrow">From “तुम”</p>
+        <blockquote class="scrub hindi" lang="hi" data-scrub data-highlight="बेहतर"><span class="qline">तेरी महफिल में आके बैठ रुश्वा भी हुआ तो क्या</span><span class="qline">ये जिल्लत भी मेरी औकात से बेहतर कहूंगा मैं</span></blockquote>
+        <cite class="quote-cite">Bidhan Arya · <a href="poems/tum.html">read the poem →</a></cite>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="write-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 class="block-title" id="write-title">Latest <em>writing.</em></h2>
+          <a class="link-arrow" href="stories.html">All stories →</a>
+        </div>
+        <div class="cards three">
+          <article class="card feature linked">
+            <div class="top" style="display:flex;justify-content:space-between;align-items:center"><span class="project-tag android">Poem</span><span class="num">01</span></div>
+            <h3 lang="hi" style="font-family:var(--font-deva)"><a href="poems/tum.html">तुम</a></h3>
+            <p lang="hi">तुम्हारी याद किसी के साथ से बेहतर कहूंगा मैं…</p>
+            <div class="foot"><span>14 Aug 2026</span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </article>
+          <article class="card feature linked">
+            <div class="top" style="display:flex;justify-content:space-between;align-items:center"><span class="project-tag research">Story</span><span class="num">02</span></div>
+            <h3><a href="stories/the-girlfriend.html">The Girlfriend</a></h3>
+            <p>John boards a bus to nowhere, trying to outrun the memories that haunt him.</p>
+            <div class="foot"><span>7 min read</span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </article>
+          <article class="card feature linked">
+            <div class="top" style="display:flex;justify-content:space-between;align-items:center"><span class="project-tag research">Story</span><span class="num">03</span></div>
+            <h3><a href="stories/the-saviour.html">The Saviour</a></h3>
+            <p>A story about a man who saves people, at least in the long run.</p>
+            <div class="foot"><span>17 min read</span><span class="go" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="cta-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="cta-band">
+          <p class="eyebrow" style="justify-content:center">Say hello</p>
+          <h2 id="cta-title">Let’s <em>talk.</em></h2>
+          <p>About flight code, simulations, a story you read here, or a game of chess.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:arya.bidhan1729@gmail.com">Email me <span class="arr">→</span></a>
+            <a class="btn ghost" href="contact.html">All links</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="yr"></span> Bidhan Arya — made with ☕</small>
+    <div class="wrap footer-inner">
+      <div class="footer-sign">
+        <a class="footer-brand" href="index.html">Bidhan Arya</a>
+        <p>Embedded engineer at EndureAir. Writing about the thin line between machines and memory.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="projects.html">Projects</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html">About</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="mailto:arya.bidhan1729@gmail.com">Email</a><a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a><a href="contact.html">All links</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <small>© <span data-year>2026</span> Bidhan Arya — made with ☕</small>
+      <a class="to-top" href="#top">Back to top ↑</a>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
-  <script src="animate.js" defer></script>
+  <script src="site.js" defer></script>
+  <script src="hero.js" defer></script>
 </body>
 </html>

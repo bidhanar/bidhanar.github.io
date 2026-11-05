@@ -7,100 +7,144 @@
   <meta name="description" content="Projects by Bidhan Arya — demos, repos and descriptions.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles-index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Serif+Devanagari:wght@400;600&amp;display=swap">
+  <meta name="theme-color" content="#0c0d12">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
     <div class="nav-inner">
-      <a class="brand" href="index.html">Bidhan Arya</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="btn ghost small" href="index.html">Home</a>
-        <a class="btn ghost small" href="projects.html" aria-current="page">Projects</a>
-        <a class="btn ghost small" href="stories.html">Stories</a>
-        <a class="btn ghost small" href="poems.html">Poems</a>
-        <a class="btn ghost small" href="about.html">About</a>
-        <a class="btn ghost small" href="contact.html">Contact</a>
+      <a class="brand" href="index.html" aria-label="Bidhan Arya, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9d5c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><circle cx="16" cy="16" r="14.5" fill="none" stroke="url(#bm-g)" stroke-opacity=".35" stroke-dasharray="2 3"/><g class="brand-rotor" fill="url(#bm-g)"><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(120 16 16)"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(240 16 16)"/></g><circle cx="16" cy="16" r="3" fill="#0c0d12" stroke="url(#bm-g)" stroke-width="1.6"/></svg><span class="brand-name">Bidhan Arya</span></a>
+      <nav class="main-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span class="nav-num">01</span>Home</a>
+        <a href="projects.html" aria-current="page"><span class="nav-num">02</span>Projects</a>
+        <a href="stories.html"><span class="nav-num">03</span>Stories</a>
+        <a href="poems.html"><span class="nav-num">04</span>Poems</a>
+        <a href="about.html"><span class="nav-num">05</span>About</a>
+        <a href="contact.html"><span class="nav-num">06</span>Contact</a>
       </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="bar"></span><span class="bar"></span></button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section">
-      <h1>Projects</h1>
-      <p class="muted">Collection of course work, summer projects and self projects. Click a card to open the project page.</p>
-
-      <div class="cards">
-        <!-- Major / course projects -->
-        <article class="card">
-          <h3><a href="projects/steinmetz.html">Analyzing Steinmetz Dataset</a></h3>
-          <p class="meta">Summer Project — Brain & Cognitive Society (May 2021 − Jul 2021)</p>
-          <p>Neural data analysis using Python (Pandas, NumPy) and visualization (Matplotlib, Seaborn). Deep learning with TensorFlow/Keras. <a href="https://github.com/bidhanar/BCS_Steinmetz" target="_blank" rel="noopener">Repo</a></p>
-        </article>
-
-        <article class="card">
-          <h3><a href="projects/effect-goals.html">Effect of Goals on Well Being</a></h3>
-          <p class="meta">Course Project — Apr 2022</p>
-          <p>Survey-based analysis (68 participants). Data collection with Google Forms, analysis in Python/Jupyter to find correlations and motivational sources. <a href="https://drive.google.com/file/d/1EtvoL6HRbBM9QQA1ClDV44VMb57vRdLK/view?usp=drive_link" target="_blank" rel="noopener">Report</a></p>
-        </article>
-
-        <article class="card">
-          <h3><a href="projects/helicopter-trim.html">Helicopter Trim Analysis</a></h3>
-          <p class="meta">Course Project — Apr 2023</p>
-          <p>Trim computation: balanced forces/moments, Newmark time-marching for flap frequency, solved trim parameters with residual/Jacobian methods. <a href="https://drive.google.com/file/d/1tOeJH3FtrIUsGNDoYSbP67z8yCpG0AOH/view?usp=drive_link" target="_blank" rel="noopener">Report</a></p>
-        </article>
-
-        <!-- Self Projects -->
-        <article class="card">
-          <h3><a href="projects/multiarray.html">MultiArray (data structure)</a></h3>
-          <p class="meta">Jan 2021 — <a href="https://github.com/bidhanar/multiarray" target="_blank" rel="noopener">GitHub</a></p>
-          <p>Implemented a dynamic multi-array/list data structure (C++ → Java), using linked lists, arrays & hash functions, with generics support.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="projects/treasure-hunt.html">Treasure Hunt App</a></h3>
-          <p class="meta">Dec 2022 — <a href="https://github.com/bidhanar/Treasure_Hunt" target="_blank" rel="noopener">GitHub</a></p>
-          <p>Android app (Java + Parse Server) for managing large-scale treasure hunts. Multiple user roles (admin/coordinator/guest); used at an event with 700+ participants.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="projects/buzzerkar.html">BuzzerKar App</a></h3>
-          <p class="meta">Dec 2022 — <a href="https://github.com/bidhanar/BuzzerKar" target="_blank" rel="noopener">GitHub</a></p>
-          <p>Android quiz management app (Java + Parse Server). Supports multiple simultaneous games and admin-created games; used for Freshers Quiz with 200+ players.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="projects/mnc-projects.html">MnC Projects & Automation</a></h3>
-          <p class="meta">2022–23</p>
-          <p>Python scripts for marks calculation and ranking for large events (700+ participants). Scripts to generate participant records and difficulty rankings for future events.</p>
-        </article>
-
-        <!-- Other projects -->
-        <article class="card">
-          <h3><a href="projects/break.html">Break — Hearts scoring app</a></h3>
-          <p class="meta">Dec 2020 – Jun 2021 — <a href="https://github.com/bidhanar/Break" target="_blank" rel="noopener">GitHub</a></p>
-          <p>Scoring app for the card game Hearts: Java backend, XML front-end for Android.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="projects/wordscape.html">Wordscape Solver</a></h3>
-          <p class="meta">Dec 2020 – Jun 2021 — <a href="https://github.com/bidhanar/Wordscape-Solver" target="_blank" rel="noopener">GitHub</a></p>
-          <p>Android app + Python solver to find solutions for WordScape puzzles.</p>
-        </article>
-
-        <article class="card">
-          <h3><a href="https://bidhanar.github.io/dumb-charades-simple/" target="_blank" rel="noopener">Dumb Charades</a></h3>
-          <p class="meta"><a href="https://github.com/bidhanar/dumb-charades-simple" target="_blank" rel="noopener">GitHub</a></p>
-          <p>A simple browser-based charades word-prompt generator — pick a category and get a random word or phrase to act out.</p>
-        </article>
-
-      </div>
-    </section>
+  <main class="container" id="main">
+    <header class="page-head">
+      <p class="eyebrow">Work · 2020 — now</p>
+      <h1 class="page-title">Things I’ve <em>built.</em></h1>
+      <p class="page-lede">Course work, summer projects and self projects — from rotor trim solvers to Android apps that ran campus events for hundreds of people. Click a card to open the project.</p>
+      <span class="page-count">11 projects</span>
+    </header>
+    <div class="filters" data-filters="#project-grid" role="group" aria-label="Filter projects">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-filter="research" aria-pressed="false">Research</button>
+      <button class="filter" type="button" data-filter="android" aria-pressed="false">Android</button>
+      <button class="filter" type="button" data-filter="code" aria-pressed="false">Code &amp; web</button>
+    </div>
+    <div class="cards" id="project-grid">
+      <article class="card project-card linked" data-cat="research">
+        <div class="top"><span class="project-tag research">Research</span><span class="idx">01</span></div>
+        <h3><a href="projects/steinmetz.html">Analyzing Steinmetz Dataset <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Summer Project · Brain &amp; Cognitive Society · May–Jul 2021</p>
+        <p>Neural data analysis using Python (Pandas, NumPy) and visualization (Matplotlib, Seaborn). Deep learning with TensorFlow/Keras. <a href="https://github.com/bidhanar/BCS_Steinmetz" target="_blank" rel="noopener">Repo</a></p>
+        <div class="stack"><span>Python</span><span>Pandas</span><span>TensorFlow</span><span>Seaborn</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="research">
+        <div class="top"><span class="project-tag research">Research</span><span class="idx">02</span></div>
+        <h3><a href="projects/effect-goals.html">Effect of Goals on Well Being <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Course Project · Apr 2022</p>
+        <p>Survey-based analysis (68 participants). Data collection with Google Forms, analysis in Python/Jupyter to find correlations and motivational sources. <a href="https://drive.google.com/file/d/1EtvoL6HRbBM9QQA1ClDV44VMb57vRdLK/view?usp=drive_link" target="_blank" rel="noopener">Report</a></p>
+        <div class="stack"><span>Python</span><span>Jupyter</span><span>Survey design</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="research">
+        <div class="top"><span class="project-tag research">Research</span><span class="idx">03</span></div>
+        <h3><a href="projects/helicopter-trim.html">Helicopter Trim Analysis <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Course Project · Apr 2023</p>
+        <p>Trim computation: balanced forces/moments, Newmark time-marching for flap frequency, solved trim parameters with residual/Jacobian methods. <a href="https://drive.google.com/file/d/1tOeJH3FtrIUsGNDoYSbP67z8yCpG0AOH/view?usp=drive_link" target="_blank" rel="noopener">Report</a></p>
+        <div class="stack"><span>Rotor dynamics</span><span>Newmark</span><span>Jacobian solver</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="code">
+        <div class="top"><span class="project-tag code">Code</span><span class="idx">04</span></div>
+        <h3><a href="projects/multiarray.html">MultiArray (data structure) <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Jan 2021 · <a href="https://github.com/bidhanar/multiarray" target="_blank" rel="noopener">GitHub</a></p>
+        <p>Implemented a dynamic multi-array/list data structure (C++ → Java), using linked lists, arrays &amp; hash functions, with generics support.</p>
+        <div class="stack"><span>C++</span><span>Java</span><span>Generics</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="android">
+        <div class="top"><span class="project-tag android">Android</span><span class="idx">05</span></div>
+        <h3><a href="projects/treasure-hunt.html">Treasure Hunt App <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Dec 2022 · <a href="https://github.com/bidhanar/Treasure_Hunt" target="_blank" rel="noopener">GitHub</a></p>
+        <p>Android app (Java + Parse Server) for managing large-scale treasure hunts. Multiple user roles (admin/coordinator/guest); used at an event with 700+ participants.</p>
+        <div class="stack"><span>Java</span><span>Android</span><span>Parse Server</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="android">
+        <div class="top"><span class="project-tag android">Android</span><span class="idx">06</span></div>
+        <h3><a href="projects/buzzerkar.html">BuzzerKar App <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Dec 2022 · <a href="https://github.com/bidhanar/BuzzerKar" target="_blank" rel="noopener">GitHub</a></p>
+        <p>Android quiz management app (Java + Parse Server). Supports multiple simultaneous games and admin-created games; used for Freshers Quiz with 200+ players.</p>
+        <div class="stack"><span>Java</span><span>Android</span><span>Parse Server</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="code">
+        <div class="top"><span class="project-tag code">Code</span><span class="idx">07</span></div>
+        <h3><a href="projects/mnc-projects.html">MnC Projects &amp; Automation <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">2022–23</p>
+        <p>Python scripts for marks calculation and ranking for large events (700+ participants). Scripts to generate participant records and difficulty rankings for future events.</p>
+        <div class="stack"><span>Python</span><span>Automation</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="android">
+        <div class="top"><span class="project-tag android">Android</span><span class="idx">08</span></div>
+        <h3><a href="projects/break.html">Break — Hearts scoring app <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Dec 2020 – Jun 2021 · <a href="https://github.com/bidhanar/Break" target="_blank" rel="noopener">GitHub</a></p>
+        <p>Scoring app for the card game Hearts: Java backend, XML front-end for Android.</p>
+        <div class="stack"><span>Java</span><span>Android</span><span>XML</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="android">
+        <div class="top"><span class="project-tag android">Android</span><span class="idx">09</span></div>
+        <h3><a href="projects/wordscape.html">Wordscape Solver <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Dec 2020 – Jun 2021 · <a href="https://github.com/bidhanar/Wordscape-Solver" target="_blank" rel="noopener">GitHub</a></p>
+        <p>Android app + Python solver to find solutions for WordScape puzzles.</p>
+        <div class="stack"><span>Android</span><span>Python</span></div>
+      </article>
+      <article class="card project-card linked live" data-cat="code">
+        <div class="top"><span class="project-tag code">Code</span><span class="idx">10</span></div>
+        <h3><a href="projects/clocks.html">Four 24-Clocks <span class="ext" aria-hidden="true">→</span></a></h3>
+        <p class="meta">Browser demo · p5.js</p>
+        <p>The current time drawn by 96 tiny analogue clocks in four 6×4 grids, slowly forming and dissolving. A browser port of a pygame animation.</p>
+        <div class="stack"><span>JavaScript</span><span>p5.js</span><span>Animation</span></div>
+      </article>
+      <article class="card project-card linked" data-cat="code">
+        <div class="top"><span class="project-tag code">Code</span><span class="idx">11</span></div>
+        <h3><a href="https://bidhanar.github.io/dumb-charades-simple/" target="_blank" rel="noopener">Dumb Charades <span class="ext" aria-hidden="true">↗</span></a></h3>
+        <p class="meta"><a href="https://github.com/bidhanar/dumb-charades-simple" target="_blank" rel="noopener">GitHub</a></p>
+        <p>A simple browser-based charades word-prompt generator — pick a category and get a random word or phrase to act out.</p>
+        <div class="stack"><span>HTML</span><span>JavaScript</span></div>
+      </article>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><small>© <span id="yrProjects"></span> Bidhan</small></div>
+    <div class="wrap footer-inner">
+      <div class="footer-sign">
+        <a class="footer-brand" href="index.html">Bidhan Arya</a>
+        <p>Embedded engineer at EndureAir. Writing about the thin line between machines and memory.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="projects.html">Projects</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html">About</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="mailto:arya.bidhan1729@gmail.com">Email</a><a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a><a href="contact.html">All links</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <small>© <span data-year>2026</span> Bidhan Arya — made with ☕</small>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
   </footer>
-
-  <script>document.getElementById('yrProjects').textContent = new Date().getFullYear();</script>
-  <script src="animate.js" defer></script>
+  <script src="site.js" defer></script>
 </body>
 </html>

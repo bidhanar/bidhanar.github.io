@@ -7,139 +7,138 @@
   <meta name="description" content="About Bidhan Arya — embedded engineer at EndureAir. Projects, roles and contact." />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff9d5c'/%3E%3Cstop offset='1' stop-color='%237c5cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='45' font-family='Arial,Helvetica,sans-serif' font-size='36' font-weight='800' fill='%2314161c' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="styles-index.css">
-  <style>
-    /* small about-page specific styles */
-    .about-grid { display:grid; grid-template-columns: 340px 1fr; gap:1.25rem; align-items:start; }
-    .profile-photo { width:100%; height:auto; border-radius:12px; display:block; object-fit:cover; }
-    .profile-card { padding:1rem; text-align:center; }
-    .profile-name { font-size:1.35rem; font-weight:800; margin:0.6rem 0 0.2rem; }
-    .profile-role { color:var(--muted); margin-bottom:0.6rem; }
-    .socials { display:flex; gap:0.5rem; justify-content:center; flex-wrap:wrap; margin-top:0.6rem; }
-    .socials a { padding:0.4rem 0.6rem; border-radius:8px; background: rgba(255,255,255,0.02); color:var(--muted); text-decoration:none; font-weight:600; }
-    .section-slim { margin-bottom:0.9rem; }
-    .two-col { display:grid; grid-template-columns: 1fr 1fr; gap:0.8rem; }
-    .list-compact { margin:0; padding-left:1.05rem; }
-    @media (max-width:980px){
-      .about-grid { grid-template-columns: 1fr; }
-      .two-col { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Noto+Serif+Devanagari:wght@400;600&amp;display=swap">
+  <meta name="theme-color" content="#0c0d12">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" id="top">
     <div class="nav-inner">
-      <a class="brand" href="index.html">Bidhan Arya</a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a class="btn ghost small" href="index.html">Home</a>
-        <a class="btn ghost small" href="projects.html">Projects</a>
-        <a class="btn ghost small" href="stories.html">Stories</a>
-        <a class="btn ghost small" href="poems.html">Poems</a>
-        <a class="btn ghost small" href="about.html" aria-current="page">About</a>
-        <a class="btn ghost small" href="contact.html">Contact</a>
+      <a class="brand" href="index.html" aria-label="Bidhan Arya, home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="bm-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9d5c"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><circle cx="16" cy="16" r="14.5" fill="none" stroke="url(#bm-g)" stroke-opacity=".35" stroke-dasharray="2 3"/><g class="brand-rotor" fill="url(#bm-g)"><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(120 16 16)"/><rect x="14.9" y="2.5" width="2.2" height="13.5" rx="1.1" transform="rotate(240 16 16)"/></g><circle cx="16" cy="16" r="3" fill="#0c0d12" stroke="url(#bm-g)" stroke-width="1.6"/></svg><span class="brand-name">Bidhan Arya</span></a>
+      <nav class="main-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html"><span class="nav-num">01</span>Home</a>
+        <a href="projects.html"><span class="nav-num">02</span>Projects</a>
+        <a href="stories.html"><span class="nav-num">03</span>Stories</a>
+        <a href="poems.html"><span class="nav-num">04</span>Poems</a>
+        <a href="about.html" aria-current="page"><span class="nav-num">05</span>About</a>
+        <a href="contact.html"><span class="nav-num">06</span>Contact</a>
       </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="bar"></span><span class="bar"></span></button>
     </div>
   </header>
 
-  <main class="container">
-    <section class="section card">
-      <div class="about-grid">
-        <!-- LEFT: profile card -->
-        <aside class="profile-card">
-          <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo">
-          <div class="profile-name">Bidhan Arya</div>
-          <div class="profile-role">Dual Degree (B.Tech + M.Tech) — Aerospace Engineering, IIT Kanpur</div>
-          <div class="section-slim">
-            <strong>Current</strong>
-            <div class="muted-small">Embedded Engineer — EndureAir Pvt. Ltd. (ArduPilot / physics simulation)</div>
-          </div>
-
-          <div style="margin-top:0.6rem">
-            <a class="btn ghost" href="contact.html" style="margin-left:0.6rem">Contact</a>
-          </div>
-
-          <div class="socials" style="margin-top:0.9rem">
-            <a href="mailto:arya.bidhan1729@gmail.com">Email</a>
+  <main class="container" id="main">
+    <header class="page-head">
+      <p class="eyebrow">About</p>
+      <h1 class="page-title">Rotor <em>Verse.</em></h1>
+    </header>
+    <div class="about-grid">
+      <aside class="card profile-card">
+        <div class="portrait" data-tilt-portrait>
+          <div class="portrait-ring" aria-hidden="true"></div>
+          <img src="me.jpg" alt="Photo of Bidhan Arya" class="profile-photo" width="1024" height="1280">
+        </div>
+        <div class="profile-name">Bidhan Arya</div>
+        <div class="profile-role">Dual Degree (B.Tech + M.Tech) — Aerospace Engineering, IIT Kanpur</div>
+        <div class="section-slim"><strong>Current</strong><div class="muted-small">Embedded Engineer — EndureAir Pvt. Ltd. (ArduPilot / physics simulation)</div></div>
+        <div class="section-slim"><strong>Location</strong><div class="muted-small">IIT Kanpur / India</div></div>
+        <div class="socials">
+          <a href="mailto:arya.bidhan1729@gmail.com">Email</a>
             <a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://www.researchgate.net/profile/Bidhan-Arya?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a>
+        </div>
+        <div class="cta-row" style="justify-content:center"><a class="btn primary small" href="contact.html">Get in touch <span class="arr">→</span></a></div>
+      </aside>
+
+      <div class="prose">
+        <p class="lead">I’m an embedded engineer at <strong>EndureAir Pvt. Ltd.</strong>, working on the ArduPilot codebase and physics simulations for autonomous flight.</p>
+        <p>I hold a Dual Degree (Aerospace Engineering) from IIT Kanpur, where I previously worked on rotorcraft flight simulation. Outside of engineering I write short stories &amp; poems, develop Android apps, and explore data science projects.</p>
+
+        <div class="stat-grid">
+          <div class="card stat-card"><b data-count="104">104</b><span>All India Rank — GATE 2023 (Aerospace)</span></div>
+          <div class="card stat-card"><b data-count="2832">2832</b><span>All India Rank — JEE Advanced 2019</span></div>
+          <div class="card stat-card"><b data-count="15">15</b><span>Clubs led as Institute Secretary, MnC</span></div>
+          <div class="card stat-card"><b data-count="700" data-suffix="+">700+</b><span>Participants at events run on my apps</span></div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <h2><span class="eyebrow">01</span>Education</h2>
+            <ol class="timeline">
+              <li><span class="when">2019 – Present</span><strong>Dual Degree (B.Tech + M.Tech), Aerospace Engineering</strong> — IIT Kanpur, India</li>
+              <li><span class="when">2018</span><strong>CBSE Class 12</strong> — Bijendra Public School, Purnea — 83.6%</li>
+              <li><span class="when">2016</span><strong>BSEB Class 10</strong> — Maa Kali High School, Purnea — 75.6%</li>
+            </ol>
           </div>
-
-          <div style="margin-top:0.9rem; font-size:0.95rem; color:var(--muted)">
-            <div><strong>Location</strong></div>
-            <div>IIT Kanpur / India</div>
+          <div>
+            <h2><span class="eyebrow">02</span>Achievements</h2>
+            <ul class="list-compact">
+              <li>All India Rank <strong>104</strong> — GATE 2023 (Aerospace Engineering)</li>
+              <li>All India Rank <strong>2832</strong> — JEE Advanced 2019</li>
+              <li>All India Rank <strong>4101</strong> — JEE Main 2019</li>
+              <li>Shortlisted for SSB Interview — NDA-II (2019)</li>
+            </ul>
           </div>
-        </aside>
+        </div>
 
-        <!-- RIGHT: main about content -->
-        <div>
-          <h1 style="margin-top:0; margin-bottom:0.25rem">About</h1>
-          <p class="muted-small">I’m an embedded engineer at <strong>EndureAir Pvt. Ltd.</strong>, working on the ArduPilot codebase and physics simulations for autonomous flight. I hold a Dual Degree (Aerospace Engineering) from IIT Kanpur, where I previously worked on rotorcraft flight simulation. Outside of engineering I write short stories & poems, develop Android apps, and explore data science projects.</p>
+        <h2><span class="eyebrow">03</span>Projects &amp; research</h2>
+        <p class="muted">I work across embedded autopilots, flight simulation, Android apps and data analysis. A few highlights:</p>
+        <ul class="list-compact">
+          <li><strong>Helicopter Trim Analysis</strong> — trim computation, Newmark’s method, residual/Jacobian-based solution (Course project).</li>
+          <li><strong>Analyzing Steinmetz Dataset</strong> — neural data analysis with Pandas, Matplotlib, and TensorFlow (Summer project).</li>
+          <li><strong>Android apps</strong> — Treasure Hunt, BuzzerKar, ReadX (group reading + synchronized PDF reader).</li>
+          <li><a href="projects.html">See all projects</a></li>
+        </ul>
 
-          <div style="margin-top:1rem" class="two-col">
-            <div>
-              <h3 style="margin-bottom:0.35rem">Education</h3>
-              <ul class="list-compact">
-                <li><strong>India</strong> — Dual Degree (B.Tech + M.Tech), Aerospace Engineering — IIT Kanpur (2019–Present)</li>
-                <li>CBSE Class 12 — Bijendra Public School, Purnea (2018) — 83.6%</li>
-                <li>BSEB Class 10 — Maa Kali High School, Purnea (2016) — 75.6%</li>
-              </ul>
-            </div>
+        <h2><span class="eyebrow">04</span>Leadership</h2>
+        <p class="muted">Organizing experience across student councils and cultural events.</p>
+        <ol class="timeline">
+          <li><span class="when">Apr 2022 – Apr 2023</span><strong>Institute Secretary — Media &amp; Culture (MnC)</strong> — led a 4-tier team across 15 clubs (~300+ members); managed financial &amp; executive affairs (capital ≈ ₹20 Lacs); organized large events (Freshers' Weekend, Inter-IIT).</li>
+          <li><span class="when">May 2021 – Jul 2023</span><strong>Mentor — Structure Super Combo (SnT)</strong> — mentored students in SAP2000 and project design.</li>
+          <li><span class="when">2020 – 21</span><strong>Secretary — Hindi Sahitya Sabha</strong> — curated literary events and wrote published poems.</li>
+          <li><span class="when">Select periods</span><strong>(Acting) General Secretary and (Acting) President, Students Gymkhana</strong> — managed auctions and campus operations.</li>
+        </ol>
 
-            <div>
-              <h3 style="margin-bottom:0.35rem">Selected Achievements</h3>
-              <ul class="list-compact">
-                <li>All India Rank <strong>104</strong> — GATE 2023 (Aerospace Engineering)</li>
-                <li>All India Rank <strong>2832</strong> — JEE Advanced 2019</li>
-                <li>All India Rank <strong>4101</strong> — JEE Main 2019</li>
-                <li>Shortlisted for SSB Interview — NDA-II (2019)</li>
-              </ul>
-            </div>
-          </div>
-
-          <hr style="margin:1rem 0">
-
-          <h3>Projects & Research</h3>
-          <p class="muted-small">I work across embedded autopilots, flight simulation, Android apps and data analysis. A few highlights:</p>
-          <ul class="list-compact">
-            <li><strong>Helicopter Trim Analysis</strong> — trim computation, Newmark’s method, residual/Jacobian-based solution (Course project).</li>
-            <li><strong>Analyzing Steinmetz Dataset</strong> — neural data analysis with Pandas, Matplotlib, and TensorFlow (Summer project).</li>
-            <li><strong>Android apps</strong> — Treasure Hunt, BuzzerKar, ReadX (group reading + synchronized PDF reader).</li>
-            <li><a href="projects.html">See all projects</a></li>
-          </ul>
-
-          <hr style="margin:1rem 0">
-
-          <h3>Positions of Responsibility & Leadership</h3>
-          <p class="muted-small">Organizing experience across student councils and cultural events.</p>
-
-          <ul class="list-compact">
-            <li><strong>Institute Secretary — Media & Culture (MnC)</strong> (Apr 2022 – Apr 2023) — led a 4-tier team across 15 clubs (~300+ members); managed financial & executive affairs (capital ≈ ₹20 Lacs); organized large events (Freshers' Weekend, Inter-IIT).</li>
-            <li><strong>Mentor — Structure Super Combo (SnT)</strong> (May 2021 – Jul 2023) — mentored students in SAP2000 and project design.</li>
-            <li><strong>Secretary — Hindi Sahitya Sabha</strong> (2020–21) — curated literary events and wrote published poems.</li>
-            <li>Acted as (Acting) General Secretary and (Acting) President (Students Gymkhana) for select periods — managed auctions and campus operations.</li>
-          </ul>
-
-          <hr style="margin:1rem 0">
-
-          <h3>Interests & Writing</h3>
-          <p class="muted-small">I write short fiction and poetry (Hindi & English), tinker with Android apps and small data projects, and enjoy chess (chess.com: <a href="https://www.chess.com/member/trona_1729" target="_blank" rel="noopener">trona_1729</a>).</p>
-
-          <div style="margin-top:1rem; display:flex; gap:0.6rem; flex-wrap:wrap">
-            <a class="btn outline" href="poems.html">Read Poems</a>
-            <a class="btn outline" href="stories.html">Read Stories</a>
-            <a class="btn outline" href="projects.html">All Projects</a>
-          </div>
-
+        <h2><span class="eyebrow">05</span>Interests &amp; writing</h2>
+        <p>I write short fiction and poetry (Hindi &amp; English), tinker with Android apps and small data projects, and enjoy chess (chess.com: <a href="https://www.chess.com/member/trona_1729" target="_blank" rel="noopener">trona_1729</a>) and Elden Ring.</p>
+        <figure class="shot">
+          <div class="shot-frame"><img src="images/elden-ring.jpg" alt="Elden Ring screenshot: two figures facing each other in a fog-covered field scattered with glowing golden embers" width="1600" height="900" loading="lazy" decoding="async"></div>
+          <figcaption><span>From my Elden Ring playthrough</span><span class="credit">Game © FromSoftware / Bandai Namco</span></figcaption>
+        </figure>
+        <div class="cta-row">
+          <a class="btn ghost" href="poems.html">Read poems <span class="arr">→</span></a>
+          <a class="btn ghost" href="stories.html">Read stories <span class="arr">→</span></a>
+          <a class="btn ghost" href="projects.html">All projects <span class="arr">→</span></a>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container"><small>© <span id="yrAbout"></span> Bidhan</small></div>
+    <div class="wrap footer-inner">
+      <div class="footer-sign">
+        <a class="footer-brand" href="index.html">Bidhan Arya</a>
+        <p>Embedded engineer at EndureAir. Writing about the thin line between machines and memory.</p>
+      </div>
+      <nav class="footer-col" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="projects.html">Projects</a><a href="stories.html">Stories</a><a href="poems.html">Poems</a><a href="about.html">About</a>
+      </nav>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="mailto:arya.bidhan1729@gmail.com">Email</a><a href="https://github.com/bidhanar" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/bidhan-arya-16b579205/" target="_blank" rel="noopener">LinkedIn</a><a href="contact.html">All links</a>
+      </div>
+    </div>
+    <div class="wrap footer-base">
+      <small>© <span data-year>2026</span> Bidhan Arya — made with ☕</small>
+      <a class="to-top" href="#top">Back to top ↑</a>
+    </div>
   </footer>
-
-  <script>document.getElementById('yrAbout').textContent = new Date().getFullYear();</script>
-  <script src="animate.js" defer></script>
+  <script src="site.js" defer></script>
 </body>
 </html>
