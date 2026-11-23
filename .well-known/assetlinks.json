@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.readx.app",
+      "sha256_cert_fingerprints": [
+        "42:FE:A0:2E:B3:DE:08:81:4B:2C:E0:68:0B:AB:97:9B:F9:E6:97:7C:1B:1B:1A:45:FA:5D:D6:A7:7F:71:48:88"
+      ]
+    }
+  }
+]

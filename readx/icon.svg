@@ -1,0 +1,215 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Main Squircle Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#178B94" />
+      <stop offset="50%" stop-color="#15639E" />
+      <stop offset="100%" stop-color="#153794" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="dropShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0A1B4D" flood-opacity="0.35" />
+    </filter>
+    <filter id="textShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#08163D" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Chat Bubble / Page Gradients -->
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#45C88B" />
+      <stop offset="100%" stop-color="#1FA89C" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5E3A" />
+      <stop offset="100%" stop-color="#FF9E2C" />
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7847" />
+      <stop offset="100%" stop-color="#E63B2E" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3399FF" />
+      <stop offset="100%" stop-color="#1258CC" />
+    </linearGradient>
+    <linearGradient id="xGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8833" />
+      <stop offset="100%" stop-color="#E8432E" />
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon Squircle Base -->
+  <rect x="112" y="112" width="800" height="800" rx="185" ry="185" fill="url(#bgGrad)" filter="url(#dropShadow)" />
+  <rect x="116" y="116" width="792" height="792" rx="181" ry="181" fill="none" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="4" />
+
+  <!-- Floating Top Chat Bubbles & Dots -->
+  <!-- Left blue bubble -->
+  <g transform="translate(320, 232)">
+    <ellipse cx="0" cy="0" rx="22" ry="17" fill="#2894E6" />
+    <polygon points="-14,12 -18,24 -4,15" fill="#2894E6" />
+  </g>
+  <!-- Center-left small grey-blue bubble -->
+  <g transform="translate(486, 272)">
+    <ellipse cx="0" cy="0" rx="18" ry="14" fill="#468BB8" />
+    <polygon points="-11,10 -15,20 -3,12" fill="#468BB8" />
+  </g>
+  <!-- Center-right teal speech bubble with 3 dots -->
+  <g transform="translate(565, 222)">
+    <ellipse cx="0" cy="0" rx="34" ry="25" fill="#3CC7B8" />
+    <polygon points="-20,18 -26,34 -8,22" fill="#3CC7B8" />
+    <circle cx="-12" cy="0" r="3.5" fill="#135A7A" />
+    <circle cx="0" cy="0" r="3.5" fill="#135A7A" />
+    <circle cx="12" cy="0" r="3.5" fill="#135A7A" />
+  </g>
+  <!-- Right orange bubble -->
+  <g transform="translate(698, 240)">
+    <ellipse cx="0" cy="0" rx="22" ry="17" fill="#FF9238" />
+    <polygon points="-14,12 -18,24 -4,15" fill="#FF9238" />
+  </g>
+
+  <!-- Floating Smooth Dots -->
+  <circle cx="422" cy="242" r="14" fill="#4B94C4" />
+  <circle cx="480" cy="196" r="10" fill="#48B8C7" />
+  <circle cx="624" cy="196" r="8" fill="#FF9838" />
+  <circle cx="728" cy="278" r="8.5" fill="#FF8C33" />
+  <circle cx="774" cy="296" r="15" fill="#52C472" />
+
+  <!-- Book Base Cover & Spine -->
+  <g filter="url(#dropShadow)">
+    <path d="M 225,355 
+             L 455,355 
+             Q 512,355 512,385 
+             Q 512,355 569,355 
+             L 799,355 
+             C 810,355 816,362 816,373 
+             L 816,742 
+             C 816,754 808,760 796,760 
+             L 568,760 
+             C 545,760 532,776 512,776 
+             C 492,776 479,760 456,760 
+             L 228,760 
+             C 216,760 208,754 208,742 
+             L 208,373 
+             C 208,362 214,355 225,355 Z" 
+          fill="#2570C4" stroke="#15468C" stroke-width="6" />
+  </g>
+
+  <!-- Book Stacked Pages (Back Layers) -->
+  <!-- Left Page Stack -->
+  <path d="M 244,365 L 480,365 Q 512,365 512,395 L 512,742 Q 485,726 452,726 L 244,726 Z" fill="#C9DDF2" />
+  <path d="M 258,350 L 485,350 Q 512,350 512,382 L 512,732 Q 485,716 455,716 L 258,716 Z" fill="#E1EEF9" />
+  <path d="M 274,335 L 488,335 Q 512,335 512,370 L 512,722 Q 485,706 458,706 L 274,706 Z" fill="#F2F7FC" />
+
+  <!-- Right Page Stack -->
+  <path d="M 780,365 L 544,365 Q 512,365 512,395 L 512,742 Q 539,726 572,726 L 780,726 Z" fill="#C9DDF2" />
+  <path d="M 766,350 L 539,350 Q 512,350 512,382 L 512,732 Q 539,716 569,716 L 766,716 Z" fill="#E1EEF9" />
+  <path d="M 750,335 L 536,335 Q 512,335 512,370 L 512,722 Q 539,706 566,706 L 750,706 Z" fill="#F2F7FC" />
+
+  <!-- Top Open White Pages -->
+  <path d="M 292,315 
+           C 365,315 470,330 512,375 
+           L 512,712 
+           C 470,685 365,692 292,692 Z" 
+        fill="#FFFFFF" />
+  <path d="M 732,315 
+           C 659,315 554,330 512,375 
+           L 512,712 
+           C 554,685 659,692 732,692 Z" 
+        fill="#FFFFFF" />
+
+  <!-- Vibrant Overlapping Collaborative Chat Bubble Petals -->
+  <g opacity="0.92">
+    <!-- Bottom Left Coral-Red Chat Bubble -->
+    <path d="M 512,520 
+             C 440,515 315,525 315,595 
+             C 315,622 332,638 352,645 
+             L 325,672 
+             L 378,655 
+             C 425,662 480,668 512,695 Z" 
+          fill="url(#redGrad)" />
+    <circle cx="448" cy="614" r="5" fill="#FF9E7D" opacity="0.7" />
+
+    <!-- Bottom Right Ocean-Blue Chat Bubble -->
+    <path d="M 512,520 
+             C 584,515 712,525 712,598 
+             C 712,645 650,655 585,662 
+             C 550,666 525,678 512,695 Z" 
+          fill="url(#blueGrad)" />
+    <circle cx="534" cy="628" r="9.5" fill="#FFFFFF" />
+
+    <!-- Top Left Green/Teal Leaf Chat Bubble -->
+    <path d="M 512,480 
+             C 495,360 420,295 342,290 
+             C 332,365 342,445 398,478 
+             L 382,508 
+             L 424,492 
+             C 462,505 495,505 512,530 Z" 
+          fill="url(#tealGrad)" />
+
+    <!-- Mini Open Book Icon inside Top-Left Petal -->
+    <g transform="translate(362, 355)" opacity="0.75">
+      <path d="M 0,4 Q 22,0 44,10 L 44,48 Q 22,38 0,42 Z" fill="#3B9EFF" />
+      <path d="M 88,4 Q 66,0 44,10 L 44,48 Q 66,38 88,42 Z" fill="#1A65B8" />
+    </g>
+
+    <!-- Top Right Vibrant Orange Flame/Chat Bubble -->
+    <path d="M 512,480 
+             C 528,375 585,310 644,248 
+             C 658,315 655,395 605,435 
+             L 614,468 
+             L 578,448 
+             C 548,465 526,485 512,530 Z" 
+          fill="url(#orangeGrad)" />
+    <!-- Three subtle dots on orange bubble -->
+    <circle cx="552" cy="392" r="4.5" fill="#FFD1A6" opacity="0.85" />
+    <circle cx="572" cy="392" r="4.5" fill="#FFD1A6" opacity="0.85" />
+    <circle cx="592" cy="392" r="4.5" fill="#FFD1A6" opacity="0.85" />
+
+    <!-- Center Overlapping Accent Shapes -->
+    <path d="M 512,480 C 482,420 432,425 432,468 C 432,505 480,515 512,540 Z" fill="#23967F" opacity="0.7" />
+    <path d="M 512,480 C 542,415 602,420 602,468 C 602,508 548,518 512,545 Z" fill="#F25630" opacity="0.75" />
+  </g>
+
+  <!-- Central Spine Shadow Line -->
+  <line x1="512" y1="375" x2="512" y2="705" stroke="#143D7A" stroke-width="2" stroke-opacity="0.25" />
+
+  <!-- "Read X" Vector Typography Banner (Pure Vector Paths for Crisp Rendering Anywhere) -->
+  <g filter="url(#textShadow)">
+    <!-- Navy Outline Layer for "Read" -->
+    <g fill="#0E296B" stroke="#0E296B" stroke-width="28" stroke-linejoin="round" stroke-linecap="round">
+      <!-- R -->
+      <path d="M 225,456 L 285,456 C 314,456 330,471 330,494 C 330,512 319,524 302,529 L 334,578 L 298,578 L 271,534 L 255,534 L 255,578 L 225,578 Z M 255,480 L 255,512 L 282,512 C 294,512 300,506 300,496 C 300,486 294,480 282,480 Z" />
+      <!-- e -->
+      <path d="M 386,488 C 414,488 430,507 430,534 L 430,542 L 368,542 C 370,554 379,561 392,561 C 402,561 410,557 416,551 L 429,566 C 419,576 406,581 390,581 C 361,581 341,562 341,534 C 341,506 360,488 386,488 Z M 368,524 L 404,524 C 403,513 396,506 386,506 C 376,506 370,513 368,524 Z" />
+      <!-- a -->
+      <path d="M 480,488 C 507,488 521,501 521,526 L 521,578 L 494,578 L 494,568 C 488,576 478,581 466,581 C 449,581 438,570 438,554 C 438,537 451,528 476,526 L 493,525 L 493,522 C 493,512 487,507 476,507 C 467,507 459,510 452,515 L 441,498 C 452,491 465,488 480,488 Z M 474,562 C 485,562 493,555 493,545 L 493,540 L 479,541 C 469,542 464,546 464,552 C 464,558 468,562 474,562 Z" />
+      <!-- d -->
+      <path d="M 594,448 L 622,448 L 622,578 L 594,578 L 594,567 C 588,576 578,581 566,581 C 543,581 528,562 528,534 C 528,506 543,488 566,488 C 578,488 588,493 594,501 Z M 575,558 C 587,558 595,549 595,534 C 595,520 587,510 575,510 C 563,510 555,520 555,534 C 555,549 563,558 575,558 Z" />
+    </g>
+
+    <!-- White Fill Layer for "Read" -->
+    <g fill="#FFFFFF">
+      <!-- R -->
+      <path d="M 225,456 L 285,456 C 314,456 330,471 330,494 C 330,512 319,524 302,529 L 334,578 L 298,578 L 271,534 L 255,534 L 255,578 L 225,578 Z M 255,480 L 255,512 L 282,512 C 294,512 300,506 300,496 C 300,486 294,480 282,480 Z" />
+      <!-- e -->
+      <path d="M 386,488 C 414,488 430,507 430,534 L 430,542 L 368,542 C 370,554 379,561 392,561 C 402,561 410,557 416,551 L 429,566 C 419,576 406,581 390,581 C 361,581 341,562 341,534 C 341,506 360,488 386,488 Z M 368,524 L 404,524 C 403,513 396,506 386,506 C 376,506 370,513 368,524 Z" />
+      <!-- a -->
+      <path d="M 480,488 C 507,488 521,501 521,526 L 521,578 L 494,578 L 494,568 C 488,576 478,581 466,581 C 449,581 438,570 438,554 C 438,537 451,528 476,526 L 493,525 L 493,522 C 493,512 487,507 476,507 C 467,507 459,510 452,515 L 441,498 C 452,491 465,488 480,488 Z M 474,562 C 485,562 493,555 493,545 L 493,540 L 479,541 C 469,542 464,546 464,552 C 464,558 468,562 474,562 Z" />
+      <!-- d -->
+      <path d="M 594,448 L 622,448 L 622,578 L 594,578 L 594,567 C 588,576 578,581 566,581 C 543,581 528,562 528,534 C 528,506 543,488 566,488 C 578,488 588,493 594,501 Z M 575,558 C 587,558 595,549 595,534 C 595,520 587,510 575,510 C 563,510 555,520 555,534 C 555,549 563,558 575,558 Z" />
+    </g>
+
+    <!-- Dynamic "X" Emblem -->
+    <g transform="translate(632, 434)">
+      <!-- Navy Backdrop for X -->
+      <path d="M -14,-16 L 56,-16 L 96,46 L 136,-16 L 206,-16 L 140,74 L 210,168 L 138,168 L 96,104 L 54,168 L -18,168 L 52,74 Z" 
+            fill="#0E296B" stroke="#0E296B" stroke-width="14" stroke-linejoin="round" />
+      
+      <!-- Left-to-Right Diagonal Stroke (Darker Orange-Red) -->
+      <polygon points="10,0 52,0 182,152 140,152" fill="#E6412E" />
+      
+      <!-- Right-to-Left Overlapping Diagonal Stroke (Bright Orange Gradient) -->
+      <polygon points="140,0 182,0 52,152 10,152" fill="url(#xGrad)" />
+    </g>
+  </g>
+</svg>
