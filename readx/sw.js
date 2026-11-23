@@ -8,7 +8,7 @@
  * Only the app's own files are handled. Firebase / Supabase requests pass straight through;
  * Firestore has its own offline cache.
  */
-const PRECACHE = {"version":"9757154954bc","files":["apple-touch-icon.png","assets/ReaderPage-C4AvQUhE.css","assets/ReaderPage-CqsgXyOF.js","assets/index-Dk_UfKWb.js","assets/index-yeudPGtg.css","assets/pdf.worker.min-CIqJB0yW.mjs","assets/rolldown-runtime-COiEfhsA.js","assets/src-C7g9dNs6.js","assets/uploadBook-Ce_ilrKW.js","assets/web-Cq7V8U5I.js","assets/web-DFzDkOtJ.js","icon.svg"]} || { version: 'dev', files: [] };
+const PRECACHE = {"version":"630fbb69a6d8","files":["apple-touch-icon.png","assets/ReaderPage-C4AvQUhE.css","assets/ReaderPage-D0EYFxGM.js","assets/index-CJhJpeRL.js","assets/index-IdFDdDEc.css","assets/pdf.worker.min-CIqJB0yW.mjs","assets/rolldown-runtime-COiEfhsA.js","assets/src-C7g9dNs6.js","assets/uploadBook-RnPcU24t.js","assets/web-DXUfffFS.js","assets/web-DzHvvKn6.js","icon.svg"]} || { version: 'dev', files: [] };
 const CACHE = `readx-app-${PRECACHE.version}`;
 const SCOPE = new URL(self.registration.scope).pathname; // e.g. /readx/
 
