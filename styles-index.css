@@ -1134,3 +1134,27 @@ kbd{ font-family:var(--font-mono); font-size:0.85em; padding:0.1em 0.45em; borde
 }
 
 /* End of stylesheet */
+
+
+/* ================================================================
+   Try it out (home page): live apps with a visual header
+   ================================================================ */
+.try-note{ font-family:var(--font-mono); font-size:0.78rem; color:var(--muted); }
+.try-card .try-visual{
+  height:170px; margin:-1.6rem -1.6rem 0.5rem;
+  display:grid; place-items:center; overflow:hidden;
+  border-bottom:1px solid var(--line); border-radius:var(--radius) var(--radius) 0 0;
+  background:radial-gradient(260px circle at 50% 120%, rgba(124,92,255,0.22), transparent 70%),
+             radial-gradient(220px circle at 50% -20%, rgba(255,157,92,0.16), transparent 70%), var(--card-2);
+}
+.try-card .try-visual img, .try-card .try-visual svg{ transition:transform 600ms var(--ease-out); }
+.try-card .try-visual img{ width:112px; height:112px; filter:drop-shadow(0 14px 24px rgba(0,0,0,0.45)); }
+.try-card:hover .try-visual img{ transform:scale(1.07) rotate(-4deg); }
+.try-card:hover .try-visual svg{ transform:scale(1.05); }
+.try-card .num.live{ color:#5ee08a; }
+.clock-grid{ width:min(86%, 300px); height:auto; }
+.clock-grid .face{ fill:rgba(255,255,255,0.03); stroke:url(#cg); stroke-width:1.4; }
+.clock-grid .hand{ stroke:var(--text); stroke-width:2; stroke-linecap:round; transform-box:view-box; transform-origin:0 0; animation:clock-spin 9s linear infinite; }
+.clock-grid .hand.h2{ stroke:var(--accent); stroke-width:1.6; }
+@keyframes clock-spin{ to{ transform:rotate(360deg); } }
+@media (prefers-reduced-motion: reduce){ .clock-grid .hand{ animation:none; } }
